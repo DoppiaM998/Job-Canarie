@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Invio CV Ridotto</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script>
+if (localStorage.getItem("accesso") !== "ok") {
+  window.location.href = "login.html";
+}
+</script>
+
+<h2>Invio CV Ridotto</h2>
+
+<form id="cvForm">
+  <label for="nome">Nome:</label><br>
+  <input type="text" id="nome" name="nome" required><br><br>
+
+  <label for="esperienze">Esperienze Lavorative Rilevanti:</label><br>
+  <textarea id="esperienze" name="esperienze" rows="6" required></textarea><br><br>
+
+  <label for="settore">Settore cercato:</label><br>
+  <select id="settore" name="settore" required>
+    <option value="Ristorazione">Ristorazione</option>
+    <option value="Turismo">Turismo</option>
+    <option value="Logistica">Logistica</option>
+    <option value="Edilizia">Edilizia</option>
+    <option value="Pulizie">Pulizie</option>
+    <option value="Sanitario">Sanitario</option>
+    <option value="Customer Service">Customer Service</option>
+    <option value="Altro">Altro</option>
+  </select><br><br>
+
+  <button type="submit">Invia CV Ridotto</button>
+</form>
+
+<script>
+document.getElementById("cvForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const nome = document.getElementById("nome").value;
+  const esperienze = document.getElementById("esperienze").value;
+  const settore = document.getElementById("settore").value;
+
+  // Per ora logga i dati in console (da sostituire con invio backend/email)
+  console.log({nome, esperienze, settore});
+  alert("CV ridotto inviato! (simulazione)");
+
+  // reset del form
+  e.target.reset();
+});
+</script>
+
+</body>
+</html>
+
+

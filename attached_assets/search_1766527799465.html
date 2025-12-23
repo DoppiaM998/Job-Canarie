@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Accesso Collaboratori</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2 data-i18n="login_title">Accesso riservato ai collaboratori</h2>
+
+<form id="loginForm">
+  <label for="password" data-i18n="password_placeholder">Inserisci password:</label><br>
+  <input type="password" id="password" placeholder="" required><br><br>
+  <button type="submit" data-i18n="enter_btn">Entra</button>
+</form>
+
+<script>
+const correctPassword = "collaboratori123"; // cambia la password se vuoi
+
+document.getElementById("loginForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const passwordInput = document.getElementById("password").value;
+
+  if(passwordInput === correctPassword){
+    localStorage.setItem("accesso", "ok");
+    alert("Accesso riuscito!");
+    window.location.href = "index.html"; // pagina dopo login
+  } else {
+    alert("Password errata!");
+  }
+});
+</script>
+
+<script src="js/lang.js"></script>
+<script>
+  // Carica lingua salvata (default italiano)
+  let currentLang = localStorage.getItem("lang") || "it";
+  loadLanguage(currentLang);
+</script>
+
+</body>
+</html>
