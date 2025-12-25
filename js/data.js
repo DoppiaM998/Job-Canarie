@@ -1,15 +1,6 @@
 const jobData = [
   {
     id: 1,
-    country: "Spagna",
-    sector: "Ristorazione",
-    zone: "Nord",
-    title: "Chef di Cucina",
-    description: "Ricerca chef con esperienza in cucina italiana",
-    salary: "€1800-2200"
-  },
-  {
-    id: 2,
     country: "Germania",
     sector: "Logistica",
     zone: "Nord",
@@ -18,34 +9,7 @@ const jobData = [
     salary: "€2000-2500"
   },
   {
-    id: 3,
-    country: "Italia",
-    sector: "Turismo",
-    zone: "Centro",
-    title: "Guida Turistica",
-    description: "Guida turistica bilingue per tour manager",
-    salary: "€1600-2000"
-  },
-  {
-    id: 4,
-    country: "Francia",
-    sector: "Edilizia",
-    zone: "Centro",
-    title: "Carpentiere",
-    description: "Carpentiere specializzato in ristrutturazioni",
-    salary: "€1900-2400"
-  },
-  {
-    id: 5,
-    country: "Spagna",
-    sector: "Customer Service",
-    zone: "Sud",
-    title: "Operatore Customer Service",
-    description: "Supporto clienti multilingue",
-    salary: "€1500-1800"
-  },
-  {
-    id: 6,
+    id: 2,
     country: "Germania",
     sector: "Sanitario",
     zone: "Sud",
@@ -54,7 +18,7 @@ const jobData = [
     salary: "€2200-2800"
   },
   {
-    id: 7,
+    id: 3,
     country: "Portogallo",
     sector: "Ristorazione",
     zone: "Nord",
@@ -63,7 +27,7 @@ const jobData = [
     salary: "€1700-2100"
   },
   {
-    id: 8,
+    id: 4,
     country: "Olanda",
     sector: "Logistica",
     zone: "Centro",
@@ -72,7 +36,7 @@ const jobData = [
     salary: "€1600-2000"
   },
   {
-    id: 9,
+    id: 5,
     country: "Belgio",
     sector: "Pulizie",
     zone: "Sud",
@@ -81,7 +45,7 @@ const jobData = [
     salary: "€1400-1800"
   },
   {
-    id: 10,
+    id: 6,
     country: "Austria",
     sector: "Turismo",
     zone: "Centro",
@@ -91,15 +55,12 @@ const jobData = [
   }
 ];
 
-const countries = ["Spagna", "Germania", "Italia", "Francia", "Portogallo", "Olanda", "Belgio", "Austria", "Svezia", "Svizzera"];
+const countries = ["Germania", "Portogallo", "Olanda", "Belgio", "Austria", "Svezia", "Svizzera"];
 
 const sectors = ["Ristorazione", "Turismo", "Logistica", "Edilizia", "Pulizie", "Sanitario", "Customer Service", "Altro"];
 
 const zones = {
-  "Spagna": ["Nord", "Centro", "Sud"],
   "Germania": ["Nord", "Centro", "Sud"],
-  "Italia": ["Nord", "Centro", "Sud"],
-  "Francia": ["Nord", "Centro", "Sud"],
   "Portogallo": ["Nord", "Centro", "Sud"],
   "Olanda": ["Nord", "Centro", "Sud"],
   "Belgio": ["Nord", "Centro", "Sud"],

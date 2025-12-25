@@ -5,17 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
   const zone = params.get('zone');
 
   const results = filterJobs(country, sector, zone);
-  displayResults(results, country, sector);
+  displayResults(results, country, sector, zone);
 });
 
-function displayResults(results, country, sector) {
+function displayResults(results, country, sector, zone) {
   const resultsContainer = document.getElementById('results');
   
   if (results.length === 0) {
     resultsContainer.innerHTML = `
       <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
-        <p>Nessun risultato trovato. Prova altri filtri.</p>
-        ${displayJobPortals(country, sector)}
+        <p>Nessun risultato trovato nel nostro database interno. Ecco alcuni link esterni mirati per la tua ricerca:</p>
+        ${displayJobPortals(country, sector, zone)}
       </div>
     `;
     return;
@@ -38,20 +38,20 @@ function displayResults(results, country, sector) {
   portalsSection.style.gridColumn = '1/-1';
   portalsSection.innerHTML = `
     <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
-    <h3 data-i18n="job_portals" style="color: #667eea; margin-bottom: 20px;">Portali di Lavoro Consigliati</h3>
-    ${displayJobPortals(country, sector)}
+    <h3 data-i18n="job_portals" style="color: #667eea; margin-bottom: 20px;">Portali di Lavoro Consigliati (Area ~15km)</h3>
+    ${displayJobPortals(country, sector, zone)}
   `;
   
   resultsContainer.parentElement.appendChild(portalsSection);
   loadLanguage(localStorage.getItem("lang") || "it");
 }
 
-function displayJobPortals(country, sector) {
-  if (!country || !sector) {
-    return '<p>Seleziona un paese e un settore per vedere i portali di lavoro consigliati.</p>';
+function displayJobPortals(country, sector, zone) {
+  if (!country || !sector || !zone) {
+    return '<p>Seleziona un paese, un settore e una zona per vedere i portali di lavoro consigliati.</p>';
   }
 
-  const portals = getJobPortals(country, sector);
+  const portals = getJobPortals(country, sector, zone);
   
   return `
     <div class="portals-grid">

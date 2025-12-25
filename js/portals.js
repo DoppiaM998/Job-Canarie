@@ -1,126 +1,95 @@
-// Portali di lavoro per ogni paese e settore
+// Portali di lavoro per ogni paese, settore e zona
+// Ogni zona copre un raggio di ~15km con ricerche mirate
 const jobPortals = {
-  "Spagna": {
-    "Ristorazione": [
-      { name: "Indeed ES", url: "https://www.indeed.es/q-Ristorazione-jobs.html?l=Spagna" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Ristorazione&location=Spagna" },
-      { name: "Infojobs", url: "https://www.infojobs.net/busqueda-empleo/ristorazione/spagna" }
-    ],
-    "Turismo": [
-      { name: "Indeed ES", url: "https://www.indeed.es/q-Turismo-jobs.html?l=Spagna" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Turismo&location=Spagna" },
-      { name: "Infojobs", url: "https://www.infojobs.net/busqueda-empleo/turismo/spagna" }
-    ],
-    "Logistica": [
-      { name: "Indeed ES", url: "https://www.indeed.es/q-Logistica-jobs.html?l=Spagna" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Logistica&location=Spagna" },
-      { name: "Infojobs", url: "https://www.infojobs.net/busqueda-empleo/logistica/spagna" }
-    ],
-    "Edilizia": [
-      { name: "Indeed ES", url: "https://www.indeed.es/q-Edilizia-jobs.html?l=Spagna" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Edilizia&location=Spagna" },
-      { name: "Infojobs", url: "https://www.infojobs.net/busqueda-empleo/edilizia/spagna" }
-    ],
-    "Pulizie": [
-      { name: "Indeed ES", url: "https://www.indeed.es/q-Pulizie-jobs.html?l=Spagna" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Pulizie&location=Spagna" }
-    ],
-    "Sanitario": [
-      { name: "Indeed ES", url: "https://www.indeed.es/q-Sanitario-jobs.html?l=Spagna" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Sanitario&location=Spagna" },
-      { name: "Infojobs", url: "https://www.infojobs.net/busqueda-empleo/sanitario/spagna" }
-    ],
-    "Customer Service": [
-      { name: "Indeed ES", url: "https://www.indeed.es/q-Customer-Service-jobs.html?l=Spagna" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Customer+Service&location=Spagna" }
-    ]
-  },
   "Germania": {
-    "Ristorazione": [
-      { name: "Indeed DE", url: "https://de.indeed.com/q-Gastronomie-jobs.html?l=Deutschland" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Gastronomie&location=Deutschland" },
-      { name: "StepStone", url: "https://www.stepstone.de/stellenangebote--Gastronomie.html" }
-    ],
-    "Turismo": [
-      { name: "Indeed DE", url: "https://de.indeed.com/q-Tourismus-jobs.html?l=Deutschland" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Tourismus&location=Deutschland" }
-    ],
-    "Logistica": [
-      { name: "Indeed DE", url: "https://de.indeed.com/q-Logistik-jobs.html?l=Deutschland" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Logistik&location=Deutschland" },
-      { name: "StepStone", url: "https://www.stepstone.de/stellenangebote--Logistik.html" }
-    ],
-    "Edilizia": [
-      { name: "Indeed DE", url: "https://de.indeed.com/q-Bauwesen-jobs.html?l=Deutschland" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Bauwesen&location=Deutschland" }
-    ],
-    "Sanitario": [
-      { name: "Indeed DE", url: "https://de.indeed.com/q-Pflege-jobs.html?l=Deutschland" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Pflege&location=Deutschland" },
-      { name: "StepStone", url: "https://www.stepstone.de/stellenangebote--Pflege.html" }
-    ]
-  },
-  "Italia": {
-    "Ristorazione": [
-      { name: "Indeed IT", url: "https://it.indeed.com/q-Ristorazione-jobs.html" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Ristorazione&location=Italia" },
-      { name: "InfoJobs", url: "https://www.infojobs.it/ricerca-lavoro/ristorazione" }
-    ],
-    "Turismo": [
-      { name: "Indeed IT", url: "https://it.indeed.com/q-Turismo-jobs.html" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Turismo&location=Italia" }
-    ],
-    "Logistica": [
-      { name: "Indeed IT", url: "https://it.indeed.com/q-Logistica-jobs.html" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Logistica&location=Italia" }
-    ]
-  },
-  "Francia": {
-    "Ristorazione": [
-      { name: "Indeed FR", url: "https://fr.indeed.com/q-Restauration-jobs.html" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Restauration&location=France" },
-      { name: "SeektoJob", url: "https://www.seektojob.com/emploi/restauration/france" }
-    ],
-    "Edilizia": [
-      { name: "Indeed FR", url: "https://fr.indeed.com/q-Batiment-jobs.html" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Batiment&location=France" }
-    ]
+    "Nord": {
+      "Ristorazione": [
+        { name: "Indeed Hamburg (Ristorazione)", url: "https://de.indeed.com/jobs?q=Gastronomie&l=Hamburg&radius=15" },
+        { name: "StepStone Bremen (Gastronomie)", url: "https://www.stepstone.de/jobs/Gastronomie/in-Bremen?radius=15" },
+        { name: "LinkedIn Nord-Deutschland Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Gastronomie&location=Hamburg" }
+      ],
+      "Edilizia": [
+        { name: "Indeed Kiel (Bauwesen)", url: "https://de.indeed.com/jobs?q=Bauwesen&l=Kiel&radius=15" },
+        { name: "Bauen.de Jobs Nord", url: "https://www.bauen.de/jobs-norddeutschland" },
+        { name: "Arbeitsagentur Bau Jobs (Hamburg)", url: "https://www.arbeitsagentur.de/jobsuche/suche?was=Bau&wo=Hamburg&umkreis=15" }
+      ],
+      "Logistica": [
+        { name: "Indeed Rostock (Logistik)", url: "https://de.indeed.com/jobs?q=Logistik&l=Rostock&radius=15" },
+        { name: "Logistik-Jobs.de (Hamburg Area)", url: "https://www.logistik-jobs.de/hamburg" }
+      ]
+    },
+    "Centro": {
+      "Sanitario": [
+        { name: "Indeed Berlin (Pflege)", url: "https://de.indeed.com/jobs?q=Pflege&l=Berlin&radius=15" },
+        { name: "Medi-Jobs Frankfurt", url: "https://www.medi-jobs.de/jobs-frankfurt" }
+      ],
+      "Logistica": [
+        { name: "Indeed Leipzig (Logistik)", url: "https://de.indeed.com/jobs?q=Logistik&l=Leipzig&radius=15" },
+        { name: "StepStone Kassel (Logistik)", url: "https://www.stepstone.de/jobs/Logistik/in-Kassel?radius=15" }
+      ]
+    },
+    "Sud": {
+      "Ristorazione": [
+        { name: "Indeed München (Gastronomie)", url: "https://de.indeed.com/jobs?q=Gastronomie&l=M%C3%BCnchen&radius=15" },
+        { name: "Hotelcareer.de Bayern", url: "https://www.hotelcareer.de/jobs/bayern" }
+      ],
+      "Sanitario": [
+        { name: "Indeed Stuttgart (Pflege)", url: "https://de.indeed.com/jobs?q=Pflege&l=Stuttgart&radius=15" },
+        { name: "Kliniken.de Jobs Süd", url: "https://www.kliniken.de/jobs-sueddeutschland" }
+      ]
+    }
   },
   "Portogallo": {
-    "Ristorazione": [
-      { name: "Indeed PT", url: "https://www.indeed.pt/q-Restauracao-jobs.html" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Restauracao&location=Portugal" }
-    ]
+    "Nord": {
+      "Turismo": [
+        { name: "Indeed Porto (Turismo)", url: "https://pt.indeed.com/jobs?q=Turismo&l=Porto&radius=15" },
+        { name: "Net-Empregos Porto", url: "https://www.net-empregos.com/pesquisa-empregos.asp?chaves=Turismo&cidade=Porto" }
+      ],
+      "Ristorazione": [
+        { name: "Indeed Braga (Restauração)", url: "https://pt.indeed.com/jobs?q=Restaura%C3%A7%C3%A3o&l=Braga&radius=15" },
+        { name: "LinkedIn Porto Gastro Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Restaurante&location=Porto" }
+      ]
+    }
   },
   "Olanda": {
-    "Logistica": [
-      { name: "Indeed NL", url: "https://www.indeed.nl/q-Logistiek-jobs.html" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Logistiek&location=Niederlande" }
-    ]
-  },
-  "Belgio": {
-    "Pulizie": [
-      { name: "Indeed BE", url: "https://www.indeed.be/q-Nettoyage-jobs.html" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Nettoyage&location=Belgique" }
-    ]
+    "Centro": {
+      "Logistica": [
+        { name: "Indeed Utrecht (Logistiek)", url: "https://www.indeed.nl/jobs?q=Logistiek&l=Utrecht&radius=15" },
+        { name: "YoungCapital Logistiek Amsterdam", url: "https://www.youngcapital.nl/vacatures/logistiek/amsterdam" }
+      ]
+    }
   },
   "Austria": {
-    "Turismo": [
-      { name: "Indeed AT", url: "https://www.indeed.at/q-Tourismus-jobs.html" },
-      { name: "LinkedIn Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Tourismus&location=Austria" }
-    ]
+    "Centro": {
+      "Turismo": [
+        { name: "Indeed Wien (Tourismus)", url: "https://at.indeed.com/jobs?q=Tourismus&l=Wien&radius=15" },
+        { name: "Hogastjob.com Österreich", url: "https://www.hogastjob.com/jobs-oesterreich" }
+      ]
+    }
   }
 };
 
-// Funzione per ottenere i portali di lavoro per un paese e settore
-function getJobPortals(country, sector) {
-  if (jobPortals[country] && jobPortals[country][sector]) {
-    return jobPortals[country][sector];
+// Funzione per ottenere i portali di lavoro per un paese, settore e zona
+function getJobPortals(country, sector, zone) {
+  if (jobPortals[country] && jobPortals[country][zone] && jobPortals[country][zone][sector]) {
+    return jobPortals[country][zone][sector];
   }
   
-  // Portali generici come fallback
+  // Portali generici come fallback basati sulla zona e settore
+  const cityMap = {
+    "Germania": { "Nord": "Hamburg", "Centro": "Berlin", "Sud": "Munich" },
+    "Portogallo": { "Nord": "Porto", "Centro": "Lisbon", "Sud": "Faro" },
+    "Olanda": { "Nord": "Groningen", "Centro": "Amsterdam", "Sud": "Eindhoven" },
+    "Belgio": { "Nord": "Antwerp", "Centro": "Brussels", "Sud": "Charleroi" },
+    "Austria": { "Nord": "Linz", "Centro": "Vienna", "Sud": "Graz" },
+    "Svezia": { "Nord": "Umea", "Centro": "Stockholm", "Sud": "Gothenburg" },
+    "Svizzera": { "Nord": "Zurich", "Centro": "Bern", "Sud": "Geneva" }
+  };
+
+  const city = (cityMap[country] && cityMap[country][zone]) || country;
+  
   return [
-    { name: "LinkedIn Jobs", url: `https://www.linkedin.com/jobs/search/?keywords=${sector}&location=${country}` },
-    { name: "Indeed", url: `https://www.indeed.com/q-${sector}-jobs.html?l=${country}` }
+    { name: `LinkedIn Jobs (${city})`, url: `https://www.linkedin.com/jobs/search/?keywords=${sector}&location=${city}` },
+    { name: `Indeed (${city})`, url: `https://www.indeed.com/jobs?q=${sector}&l=${city}&radius=15` }
   ];
 }
