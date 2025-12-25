@@ -6,7 +6,7 @@
   <title>Ricerca Offerte</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="search-bg" style="background-image: linear-gradient(rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)), url('attached_assets/stock_images/modern_office_or_pro_62ed6648.jpg');">
 
 <div class="lang-selector">
   <button class="lang-btn active" data-lang="it" onclick="changeLanguage('it')">IT</button>
@@ -14,34 +14,35 @@
   <button class="lang-btn" data-lang="es" onclick="changeLanguage('es')">ES</button>
 </div>
 
-<section>
-  <h2 data-i18n="search_title">Ricerca Offerte di Lavoro</h2>
+<section class="search-container">
+  <div class="search-header">
+    <h2 data-i18n="search_title">Ricerca Offerte di Lavoro</h2>
+    <p>Personalizza i filtri per trovare la posizione perfetta in Europa</p>
+  </div>
 
-  <form id="searchForm">
-    <div class="search-grid">
-      <div class="search-group">
-        <label for="country" data-i18n="country_label">Scegli il Paese:</label>
-        <select id="country" name="country">
-          <option value="">-- Tutti i Paesi --</option>
-        </select>
-      </div>
-
-      <div class="search-group">
-        <label for="sector" data-i18n="sector_label">Scegli il Settore:</label>
-        <select id="sector" name="sector">
-          <option value="">-- Tutti i Settori --</option>
-        </select>
-      </div>
-
-      <div class="search-group">
-        <label for="zone" data-i18n="zone_label">Scegli la Zona:</label>
-        <select id="zone" name="zone">
-          <option value="">-- Tutte le Zone --</option>
-        </select>
-      </div>
+  <form id="searchForm" class="filter-grid">
+    <div class="filter-item">
+      <label for="country" data-i18n="country_label">Scegli il Paese:</label>
+      <select id="country" name="country" required>
+        <option value="">-- Seleziona --</option>
+      </select>
     </div>
 
-    <button type="submit" class="btn" data-i18n="search_btn">Cerca</button>
+    <div class="filter-item">
+      <label for="sector" data-i18n="sector_label">Scegli il Settore:</label>
+      <select id="sector" name="sector" required>
+        <option value="">-- Seleziona --</option>
+      </select>
+    </div>
+
+    <div class="filter-item">
+      <label for="zone" data-i18n="zone_label">Scegli la Zona:</label>
+      <select id="zone" name="zone" required>
+        <option value="">-- Prima seleziona un paese --</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-search" data-i18n="search_btn">Cerca Opportunità</button>
   </form>
 </section>
 
