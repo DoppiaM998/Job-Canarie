@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Risultati Ricerca</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20251226_v2">
 </head>
 <body>
 
@@ -69,10 +69,10 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="js/lang.js?v=20251226"></script>
-<script src="js/data.js?v=20251226"></script>
-<script src="js/portals.js?v=20251226"></script>
-<script src="js/results.js?v=20251226"></script>
+<script src="js/lang.js?v=20251226_v2"></script>
+<script src="js/data.js?v=20251226_v2"></script>
+<script src="js/portals.js?v=20251226_v2"></script>
+<script src="js/results.js?v=20251226_v2"></script>
 
 <footer>
   <div class="footer-content">
@@ -151,8 +151,6 @@ document.getElementById('confirmLegalBtn').onclick = function() {
   document.getElementById('modalStep3').style.display = "block";
   
   const targetUrl = document.getElementById('cvModal').dataset.targetUrl;
-  // Non apriamo più subito, l'utente vede le istruzioni finali prima.
-  // Oppure possiamo aprirlo in un'altra scheda se preferito.
   setTimeout(() => {
     window.open(targetUrl, '_blank');
   }, 3000);
