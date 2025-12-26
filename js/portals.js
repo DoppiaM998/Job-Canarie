@@ -4,66 +4,118 @@ const jobPortals = {
   "Germania": {
     "Nord": {
       "Ristorazione": [
-        { name: "Indeed Hamburg (Ristorazione)", url: "https://de.indeed.com/jobs?q=Gastronomie&l=Hamburg&radius=15" },
-        { name: "StepStone Bremen (Gastronomie)", url: "https://www.stepstone.de/jobs/Gastronomie/in-Bremen?radius=15" },
-        { name: "LinkedIn Nord-Deutschland Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Gastronomie&location=Hamburg" }
-      ],
-      "Edilizia": [
-        { name: "Indeed Kiel (Bauwesen)", url: "https://de.indeed.com/jobs?q=Bauwesen&l=Kiel&radius=15" },
-        { name: "Bauen.de Jobs Nord", url: "https://www.bauen.de/jobs-norddeutschland" },
-        { name: "Arbeitsagentur Bau Jobs (Hamburg)", url: "https://www.arbeitsagentur.de/jobsuche/suche?was=Bau&wo=Hamburg&umkreis=15" }
+        { name: "Indeed Hamburg (Gastronomie)", url: "https://de.indeed.com/jobs?q=Gastronomie&l=Hamburg&radius=15" },
+        { name: "StepStone Bremen (Gastronomie)", url: "https://www.stepstone.de/jobs/Gastronomie/in-Bremen?radius=15" }
       ],
       "Logistica": [
-        { name: "Indeed Rostock (Logistik)", url: "https://de.indeed.com/jobs?q=Logistik&l=Rostock&radius=15" },
-        { name: "Logistik-Jobs.de (Hamburg Area)", url: "https://www.logistik-jobs.de/hamburg" }
+        { name: "Indeed Hamburg (Logistik)", url: "https://de.indeed.com/jobs?q=Logistik&l=Hamburg&radius=15" },
+        { name: "StepStone Bremen (Logistik)", url: "https://www.stepstone.de/jobs/Logistik/in-Bremen?radius=15" }
+      ],
+      "Commercio": [
+        { name: "Indeed Hamburg (Handel)", url: "https://de.indeed.com/jobs?q=Einzelhandel&l=Hamburg&radius=15" },
+        { name: "StepStone Bremen (Handel)", url: "https://www.stepstone.de/jobs/Einzelhandel/in-Bremen?radius=15" }
       ]
     },
     "Centro": {
-      "Sanitario": [
-        { name: "Indeed Berlin (Pflege)", url: "https://de.indeed.com/jobs?q=Pflege&l=Berlin&radius=15" },
-        { name: "Medi-Jobs Frankfurt", url: "https://www.medi-jobs.de/jobs-frankfurt" }
+      "Finanza": [
+        { name: "Indeed Frankfurt (Finanzen)", url: "https://de.indeed.com/jobs?q=Finanzen&l=Frankfurt&radius=15" },
+        { name: "StepStone Frankfurt (Banking)", url: "https://www.stepstone.de/jobs/Banken/in-Frankfurt-am-Main?radius=15" }
       ],
       "Logistica": [
-        { name: "Indeed Leipzig (Logistik)", url: "https://de.indeed.com/jobs?q=Logistik&l=Leipzig&radius=15" },
-        { name: "StepStone Kassel (Logistik)", url: "https://www.stepstone.de/jobs/Logistik/in-Kassel?radius=15" }
+        { name: "Indeed Köln (Logistik)", url: "https://de.indeed.com/jobs?q=Logistik&l=K%C3%B6ln&radius=15" },
+        { name: "StepStone Düsseldorf (Logistik)", url: "https://www.stepstone.de/jobs/Logistik/in-D%C3%BCsseldorf?radius=15" }
       ]
     },
     "Sud": {
-      "Ristorazione": [
-        { name: "Indeed München (Gastronomie)", url: "https://de.indeed.com/jobs?q=Gastronomie&l=M%C3%BCnchen&radius=15" },
-        { name: "Hotelcareer.de Bayern", url: "https://www.hotelcareer.de/jobs/bayern" }
+      "Tecnologia": [
+        { name: "Indeed München (IT)", url: "https://de.indeed.com/jobs?q=IT&l=M%C3%BCnchen&radius=15" },
+        { name: "StepStone Stuttgart (Engineering)", url: "https://www.stepstone.de/jobs/Ingenieurwesen/in-Stuttgart?radius=15" }
       ],
-      "Sanitario": [
-        { name: "Indeed Stuttgart (Pflege)", url: "https://de.indeed.com/jobs?q=Pflege&l=Stuttgart&radius=15" },
-        { name: "Kliniken.de Jobs Süd", url: "https://www.kliniken.de/jobs-sueddeutschland" }
-      ]
-    }
-  },
-  "Portogallo": {
-    "Nord": {
-      "Turismo": [
-        { name: "Indeed Porto (Turismo)", url: "https://pt.indeed.com/jobs?q=Turismo&l=Porto&radius=15" },
-        { name: "Net-Empregos Porto", url: "https://www.net-empregos.com/pesquisa-empregos.asp?chaves=Turismo&cidade=Porto" }
-      ],
-      "Ristorazione": [
-        { name: "Indeed Braga (Restauração)", url: "https://pt.indeed.com/jobs?q=Restaura%C3%A7%C3%A3o&l=Braga&radius=15" },
-        { name: "LinkedIn Porto Gastro Jobs", url: "https://www.linkedin.com/jobs/search/?keywords=Restaurante&location=Porto" }
-      ]
-    }
-  },
-  "Olanda": {
-    "Centro": {
-      "Logistica": [
-        { name: "Indeed Utrecht (Logistiek)", url: "https://www.indeed.nl/jobs?q=Logistiek&l=Utrecht&radius=15" },
-        { name: "YoungCapital Logistiek Amsterdam", url: "https://www.youngcapital.nl/vacatures/logistiek/amsterdam" }
+      "Automotive": [
+        { name: "Indeed München (Automotive)", url: "https://de.indeed.com/jobs?q=Automotive&l=M%C3%BCnchen&radius=15" },
+        { name: "StepStone Stuttgart (Automotive)", url: "https://www.stepstone.de/jobs/Automotive/in-Stuttgart?radius=15" }
       ]
     }
   },
   "Austria": {
-    "Centro": {
+    "Nord / Centro": {
+      "Finanza": [
+        { name: "Indeed Wien (Finanzen)", url: "https://at.indeed.com/jobs?q=Finanzen&l=Wien&radius=15" },
+        { name: "StepStone Wien (International)", url: "https://www.stepstone.at/jobs/International/in-Wien?radius=15" }
+      ],
+      "Tecnologia": [
+        { name: "Indeed Linz (IT)", url: "https://at.indeed.com/jobs?q=IT&l=Linz&radius=15" },
+        { name: "StepStone Linz (Technik)", url: "https://www.stepstone.at/jobs/Technik/in-Linz?radius=15" }
+      ]
+    },
+    "Ovest / Sud": {
       "Turismo": [
-        { name: "Indeed Wien (Tourismus)", url: "https://at.indeed.com/jobs?q=Tourismus&l=Wien&radius=15" },
-        { name: "Hogastjob.com Österreich", url: "https://www.hogastjob.com/jobs-oesterreich" }
+        { name: "Indeed Salzburg (Tourismus)", url: "https://at.indeed.com/jobs?q=Tourismus&l=Salzburg&radius=15" },
+        { name: "StepStone Graz (Service)", url: "https://www.stepstone.at/jobs/Service/in-Graz?radius=15" }
+      ],
+      "Tecnologia": [
+        { name: "Indeed Graz (IT)", url: "https://at.indeed.com/jobs?q=IT&l=Graz&radius=15" },
+        { name: "StepStone Graz (Technik)", url: "https://www.stepstone.at/jobs/Technik/in-Graz?radius=15" }
+      ]
+    }
+  },
+  "Olanda": {
+    "Nord": {
+      "Energia": [
+        { name: "Indeed Groningen (Energie)", url: "https://www.indeed.nl/jobs?q=Energie&l=Groningen&radius=15" }
+      ]
+    },
+    "Centro": {
+      "Tecnologia": [
+        { name: "Indeed Amsterdam (Tech)", url: "https://www.indeed.nl/jobs?q=Tech&l=Amsterdam&radius=15" },
+        { name: "Indeed Utrecht (IT)", url: "https://www.indeed.nl/jobs?q=IT&l=Utrecht&radius=15" }
+      ],
+      "Turismo": [
+        { name: "Indeed Amsterdam (Toerisme)", url: "https://www.indeed.nl/jobs?q=Toerisme&l=Amsterdam&radius=15" }
+      ]
+    },
+    "Sud": {
+      "Logistica": [
+        { name: "Indeed Rotterdam (Logistiek)", url: "https://www.indeed.nl/jobs?q=Logistiek&l=Rotterdam&radius=15" }
+      ],
+      "Tecnologia": [
+        { name: "Indeed Eindhoven (High Tech)", url: "https://www.indeed.nl/jobs?q=High+Tech&l=Eindhoven&radius=15" }
+      ]
+    }
+  },
+  "Belgio": {
+    "Nord (Fiandre)": {
+      "Finanza": [
+        { name: "Indeed Bruxelles (Finance)", url: "https://be.indeed.com/jobs?q=Finance&l=Bruxelles&radius=15" }
+      ],
+      "Logistica": [
+        { name: "Indeed Antwerpen (Logistiek)", url: "https://be.indeed.com/jobs?q=Logistiek&l=Antwerpen&radius=15" }
+      ]
+    },
+    "Sud (Vallonia)": {
+      "Logistica": [
+        { name: "Indeed Liège (Logistique)", url: "https://be.indeed.com/jobs?q=Logistique&l=Li%C3%A8ge&radius=15" }
+      ]
+    }
+  },
+  "Svizzera": {
+    "Nord": {
+      "Finanza": [
+        { name: "Indeed Zürich (Finanzen)", url: "https://ch.indeed.com/jobs?q=Finanzen&l=Z%C3%BCrich&radius=15" }
+      ],
+      "Farmaceutico": [
+        { name: "Indeed Basel (Pharma)", url: "https://ch.indeed.com/jobs?q=Pharma&l=Basel&radius=15" }
+      ]
+    },
+    "Centro": {
+      "Finanza": [
+        { name: "Indeed Zug (Finance)", url: "https://ch.indeed.com/jobs?q=Finance&l=Zug&radius=15" }
+      ]
+    },
+    "Sud": {
+      "Finanza": [
+        { name: "Indeed Genève (Finance)", url: "https://ch.indeed.com/jobs?q=Finance&l=Gen%C3%A8ve&radius=15" },
+        { name: "Indeed Lugano (Finanza)", url: "https://ch.indeed.com/jobs?q=Finanza&l=Lugano&radius=15" }
       ]
     }
   }
@@ -77,19 +129,31 @@ function getJobPortals(country, sector, zone) {
   
   // Portali generici come fallback basati sulla zona e settore
   const cityMap = {
-    "Germania": { "Nord": "Hamburg", "Centro": "Berlin", "Sud": "Munich" },
+    "Germania": { "Nord": "Hamburg", "Centro": "Frankfurt", "Sud": "Munich" },
     "Portogallo": { "Nord": "Porto", "Centro": "Lisbon", "Sud": "Faro" },
-    "Olanda": { "Nord": "Groningen", "Centro": "Amsterdam", "Sud": "Eindhoven" },
-    "Belgio": { "Nord": "Antwerp", "Centro": "Brussels", "Sud": "Charleroi" },
-    "Austria": { "Nord": "Linz", "Centro": "Vienna", "Sud": "Graz" },
+    "Olanda": { "Nord": "Groningen", "Centro": "Amsterdam", "Sud": "Rotterdam" },
+    "Belgio": { "Nord (Fiandre)": "Brussels", "Sud (Vallonia)": "Liege" },
+    "Austria": { "Nord / Centro": "Vienna", "Ovest / Sud": "Salzburg" },
     "Svezia": { "Nord": "Umea", "Centro": "Stockholm", "Sud": "Gothenburg" },
-    "Svizzera": { "Nord": "Zurich", "Centro": "Bern", "Sud": "Geneva" }
+    "Svizzera": { "Nord": "Zurich", "Centro": "Zug", "Sud": "Geneva" }
   };
 
   const city = (cityMap[country] && cityMap[country][zone]) || country;
   
+  // Dominio per nazione
+  const domains = {
+    "Germania": "de",
+    "Austria": "at",
+    "Olanda": "nl",
+    "Belgio": "be",
+    "Svizzera": "ch",
+    "Portogallo": "pt",
+    "Svezia": "se"
+  };
+  const dom = domains[country] || "com";
+
   return [
     { name: `LinkedIn Jobs (${city})`, url: `https://www.linkedin.com/jobs/search/?keywords=${sector}&location=${city}` },
-    { name: `Indeed (${city})`, url: `https://www.indeed.com/jobs?q=${sector}&l=${city}&radius=15` }
+    { name: `Indeed (${city})`, url: `https://${dom === "nl" ? "www.indeed.nl" : "de.indeed.com"}/jobs?q=${sector}&l=${city}&radius=15` }
   ];
 }
