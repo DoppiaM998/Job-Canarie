@@ -22,10 +22,10 @@
 
 <!-- Modal Registrazione CV -->
 <div id="cvModal" class="modal">
-  <div class="modal-content">
+  <div class="modal-content" id="modalStep1">
     <span class="close-modal" onclick="closeCVModal()">&times;</span>
     <h2 data-i18n="register_title">Registrazione Candidato</h2>
-    <p data-i18n="register_subtitle">Inserisci i tuoi dati prima di procedere con la candidatura</p>
+    <p data-i18n="register_subtitle">Inserisci i tuoi dati e genera il tuo CV PDF</p>
     <form id="modalRegisterForm" class="filter-grid">
       <div class="filter-item">
         <label for="modal-name" data-i18n="name_label">Nome Completo:</label>
@@ -43,11 +43,32 @@
         <label for="modal-experience" data-i18n="experience_label">Esperienze Lavorative:</label>
         <textarea id="modal-experience" rows="4" required></textarea>
       </div>
-      <button type="submit" class="btn btn-search" data-i18n="submit_btn">Invia Candidatura</button>
+      <button type="submit" class="btn btn-search" data-i18n="submit_btn">Genera CV e Procedi</button>
     </form>
+  </div>
+
+  <div class="modal-content" id="modalStep2" style="display:none;">
+    <span class="close-modal" onclick="closeCVModal()">&times;</span>
+    <h2 data-i18n="legal_step_title">Conferma Informative Legali</h2>
+    <div class="legal-scroll-area">
+      <p data-i18n="legal_step_text">Per completare la candidatura, devi leggere e accettare le condizioni contrattuali e la gestione della cauzione.</p>
+      <div class="legal-box" id="modal-legal-content" data-i18n="legal_content"></div>
+    </div>
+    <div class="flex-row gap-2 mt-4">
+      <button id="downloadPdfBtn" class="btn variant-outline" data-i18n="download_cv_btn">Scarica il tuo CV PDF</button>
+      <button id="confirmLegalBtn" class="btn" data-i18n="accept_btn">Accetto e Confermo Candidatura</button>
+    </div>
+  </div>
+
+  <div class="modal-content" id="modalStep3" style="display:none;">
+    <span class="close-modal" onclick="closeCVModal()">&times;</span>
+    <h2 data-i18n="success_title">Candidatura Inviata</h2>
+    <p class="final-instruction" data-i18n="final_instruction">Ottimo! Il tuo CV è stato generato. Ora devi recarti in Avenida de la Unión 32 (Vecindario) per la firma del contratto fisico e il versamento della cauzione di €300 (rimborsabile).</p>
+    <button onclick="closeCVModal()" class="btn w-full">Chiudi</button>
   </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="js/lang.js?v=20251226"></script>
 <script src="js/data.js?v=20251226"></script>
 <script src="js/portals.js?v=20251226"></script>
@@ -79,19 +100,62 @@ function openCVModal(targetUrl) {
 
 function closeCVModal() {
   document.getElementById('cvModal').style.display = "none";
+  document.getElementById('modalStep1').style.display = "block";
+  document.getElementById('modalStep2').style.display = "none";
+  document.getElementById('modalStep3').style.display = "none";
 }
+
+let generatedPdfBlob = null;
 
 document.getElementById('modalRegisterForm').onsubmit = function(e) {
   e.preventDefault();
   const name = document.getElementById('modal-name').value;
   const email = document.getElementById('modal-email').value;
+  const phone = document.getElementById('modal-phone').value;
   const experience = document.getElementById('modal-experience').value;
   
-  localStorage.setItem("candidateData", JSON.stringify({ name, email, experience, registeredAt: new Date().toISOString() }));
+  // Genera PDF
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  doc.setFontSize(22);
+  doc.text("CURRICULUM VITAE", 105, 20, { align: "center" });
+  doc.setFontSize(14);
+  doc.text(`Nome: ${name}`, 20, 40);
+  doc.text(`Email: ${email}`, 20, 50);
+  doc.text(`Telefono: ${phone}`, 20, 60);
+  doc.text("Esperienze:", 20, 80);
+  doc.setFontSize(12);
+  const splitExp = doc.splitTextToSize(experience, 170);
+  doc.text(splitExp, 20, 90);
+  
+  generatedPdfBlob = doc.output('blob');
+  
+  // Passa allo step 2
+  document.getElementById('modalStep1').style.display = "none";
+  document.getElementById('modalStep2').style.display = "block";
+};
+
+document.getElementById('downloadPdfBtn').onclick = function() {
+  if (generatedPdfBlob) {
+    const url = URL.createObjectURL(generatedPdfBlob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `CV_${document.getElementById('modal-name').value.replace(/\s+/g, '_')}.pdf`;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+};
+
+document.getElementById('confirmLegalBtn').onclick = function() {
+  document.getElementById('modalStep2').style.display = "none";
+  document.getElementById('modalStep3').style.display = "block";
   
   const targetUrl = document.getElementById('cvModal').dataset.targetUrl;
-  closeCVModal();
-  window.open(targetUrl, '_blank');
+  // Non apriamo più subito, l'utente vede le istruzioni finali prima.
+  // Oppure possiamo aprirlo in un'altra scheda se preferito.
+  setTimeout(() => {
+    window.open(targetUrl, '_blank');
+  }, 3000);
 };
 
 window.onclick = function(event) {
