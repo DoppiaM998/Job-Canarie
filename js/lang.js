@@ -41,9 +41,6 @@ const translations = {
     success_title: "Candidatura Inviata"
   },
   en: {
-    login_title: "Access reserved for collaborators",
-    password_placeholder: "Enter password:",
-    enter_btn: "Enter",
     register_title: "Candidate Registration",
     register_subtitle: "Enter your details and generate your PDF CV",
     email_label: "Email:",
@@ -85,9 +82,6 @@ const translations = {
     success_title: "Application Submitted"
   },
   es: {
-    login_title: "Acceso reservado para colaboradores",
-    password_placeholder: "Ingrese contraseña:",
-    enter_btn: "Entrar",
     register_title: "Registro de Candidato",
     register_subtitle: "Introduce tus datos y genera tu CV en PDF",
     email_label: "Correo Electrónico:",
@@ -129,9 +123,6 @@ const translations = {
     success_title: "Solicitud Enviada"
   },
   de: {
-    login_title: "Zugang für Mitarbeiter reserviert",
-    password_placeholder: "Passwort eingeben:",
-    enter_btn: "Anmelden",
     register_title: "Kandidatenregistrierung",
     register_subtitle: "Geben Sie Ihre Daten ein und erstellen Sie Ihren PDF-Lebenslauf",
     email_label: "E-Mail:",
@@ -168,9 +159,6 @@ const translations = {
     success_title: "Bewerbung eingereicht"
   },
   no: {
-    login_title: "Tilgang reservert for samarbeidspartnere",
-    password_placeholder: "Skriv inn passord:",
-    enter_btn: "Logg inn",
     register_title: "Kandidatregistrering",
     register_subtitle: "Skriv inn detaljene dine og generer din PDF-CV",
     email_label: "E-post:",
@@ -188,7 +176,7 @@ const translations = {
     submit_btn: "Generer CV og fortsett",
     legal_title: "JURIDISK MERKNAD OG VILKÅR FOR BRUK",
     legal_content: `MEGLINGSKONTRAKT OG DEPOSITUM:
-    Denne søke- og utvelgelsestjenesten er gratis for konsultasjon.
+    Denne søke- og utvelglesestjenesten er gratis for konsultasjon.
     For å gå videre med ansettelsen og den fysiske kontraktssigneringen, må du imidlertid besøke vårt kontor:
     Adresse: Avenida de la Unión 32, Vecindario, Gran Canaria.
 
@@ -215,12 +203,9 @@ function loadLanguage(lang) {
       element.textContent = translations[lang][key];
     }
   });
-  
-  // Salva la lingua selezionata
   localStorage.setItem("lang", lang);
 }
 
-// Funzione per cambiare lingua
 function changeLanguage(lang) {
   loadLanguage(lang);
   updateActiveLangButton(lang);
