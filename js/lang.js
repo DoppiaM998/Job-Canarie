@@ -40,7 +40,12 @@ const translations = {
     accept_btn: "Accetto e Confermo Candidatura",
     final_instruction: "Ottimo! Il tuo CV è stato generato. Ora devi recarti in Avenida de la Unión 32 (Vecindario) per la firma del contratto fisico e il versamento della cauzione di €300 (rimborsabile).",
     download_cv_btn: "Scarica il tuo CV PDF",
-    success_title: "Candidatura Inviata"
+    success_title: "Candidatura Inviata",
+    why_us_title: "Perché candidarsi tramite noi",
+    why_us_content: `• Accompagnamento completo: Dalla scelta del settore alla firma del contratto.
+    • Network Esclusivo: Accesso diretto ad aziende selezionate nel Nord Europa.
+    • Selezione Mirata: Candidature che garantiscono un inserimento più rapido e sicuro.
+    • Supporto Fisico: Una sede reale a Gran Canaria per la tua tranquillità.`
   },
   en: {
     register_title: "Candidate Registration",
@@ -64,7 +69,9 @@ const translations = {
     sector_search_label: "Sector you're looking for:",
     submit_btn: "Generate CV and Proceed",
     legal_title: "LEGAL NOTICE AND TERMS OF SERVICE",
-    legal_content: `MEDIATION CONTRACT AND DEPOSIT:
+    legal_content: `We don't just connect candidates and companies. We accompany you step by step in your working journey abroad. The companies we collaborate with in Northern Europe receive exclusive applications through our network, which guarantees targeted selection and faster placement.
+
+    MEDIATION CONTRACT AND DEPOSIT:
     This search and selection service is free for consultation.
     However, to proceed with the hiring and the physical contract signature, you must visit our office:
     Address: Avenida de la Unión 32, Vecindario, Gran Canaria.
@@ -81,7 +88,12 @@ const translations = {
     accept_btn: "I Accept and Confirm Application",
     final_instruction: "Great! Your CV has been generated. Now you must go to Avenida de la Unión 32 (Vecindario) to sign the physical contract and pay the €300 deposit (refundable).",
     download_cv_btn: "Download your PDF CV",
-    success_title: "Application Submitted"
+    success_title: "Application Submitted",
+    why_us_title: "Why apply through us",
+    why_us_content: `• Full Guidance: From sector choice to contract signing.
+    • Exclusive Network: Direct access to selected companies in Northern Europe.
+    • Targeted Selection: Applications that guarantee faster and safer placement.
+    • Physical Support: A real office in Gran Canaria for your peace of mind.`
   },
   es: {
     register_title: "Registro de Candidato",
@@ -105,7 +117,9 @@ const translations = {
     sector_search_label: "Sector que buscas:",
     submit_btn: "Generar CV y Continuar",
     legal_title: "AVISO LEGAL Y CONDICIONES DEL SERVIZIO",
-    legal_content: `CONTRATO DE MEDIACIÓN Y FIANZA:
+    legal_content: `No ponemos simplemente en contacto candidatos y empresas. Te acompañamos paso a paso en tu recorrido laboral en el extranjero. Las empresas con las que colaboramos en el norte de Europa reciben candidaturas exclusivas a través de nuestra red, lo que garantiza una selección dirigida y una inserción más rápida.
+
+    CONTRATO DE MEDIACIÓN Y FIANZA:
     Este servicio de búsqueda y selección es gratuito para consulta.
     Sin embargo, para proceder con la contratación y la firma del contrato físico, es necesario acudir a nuestra oficina:
     Dirección: Avenida de la Unión 32, Vecindario, Gran Canaria.
@@ -122,7 +136,12 @@ const translations = {
     accept_btn: "Acepto y Confirmo Solicitud",
     final_instruction: "¡Genial! Tu CV ha sido generado. Ahora debes acudir a Avenida de la Unión 32 (Vecindario) para la firma del contrato físico y el pago de la fianza de 300€ (reembolsable).",
     download_cv_btn: "Descargar tu CV en PDF",
-    success_title: "Solicitud Enviada"
+    success_title: "Solicitud Enviada",
+    why_us_title: "¿Por qué postular a través di noi?",
+    why_us_content: `• Acompañamiento Completo: Desde la elección del sector hasta la firma del contrato.
+    • Red Exclusiva: Acceso directo a empresas seleccionadas en el norte de Europa.
+    • Selección Dirigida: Candidaturas que garantizan una inserción más rápida y segura.
+    • Soporte Físico: Una oficina real en Gran Canaria para tu tranquilidad.`
   },
   de: {
     register_title: "Kandidatenregistrierung",
@@ -141,7 +160,9 @@ const translations = {
     apply_here: "Hier bewerben",
     submit_btn: "Lebenslauf erstellen und fortfahren",
     legal_title: "RECHTLICHER HINWEIS UND NUTZUNGSBEDINGUNGEN",
-    legal_content: `VERMITTLUNGSVERTRAG UND KAUTION:
+    legal_content: `Wir bringen nicht einfach nur Kandidaten und Unternehmen zusammen. Wir begleiten Sie Schritt für Schritt auf Ihrem Arbeitsweg ins Ausland. Die Unternehmen, mit denen wir in Nordeuropa zusammenarbeiten, erhalten exklusive Bewerbungen über unser Netzwerk, was eine gezielte Auswahl und eine schnellere Vermittlung garantiert.
+
+    VERMITTLUNGSVERTRAG UND KAUTION:
     Dieser Such- und Auswahldienst ist zur Beratung kostenlos.
     Um jedoch mit der Einstellung und der Unterzeichnung des physischen Vertrags fortzufahren, müssen Sie unser Büro besuchen:
     Adresse: Avenida de la Unión 32, Vecindario, Gran Canaria.
@@ -158,7 +179,12 @@ const translations = {
     accept_btn: "Ich akzeptiere und bestätige die Bewerbung",
     final_instruction: "Super! Ihr Lebenslauf wurde erstellt. Jetzt müssen Sie zur Avenida de la Unión 32 (Vecindario) gehen, um den physischen Vertrag zu unterzeichnen und die Kaution von 300 € (rückzahlbar) zu hinterlegen.",
     download_cv_btn: "Laden Sie Ihren PDF-Lebenslauf herunter",
-    success_title: "Bewerbung eingereicht"
+    success_title: "Bewerbung eingereicht",
+    why_us_title: "Warum Sie sich über uns bewerben sollten",
+    why_us_content: `• Umfassende Begleitung: Von der Branchenwahl bis zur Vertragsunterzeichnung.
+    • Exklusives Netzwerk: Direkter Zugang zu ausgewählten Unternehmen in Nordeuropa.
+    • Gezielte Auswahl: Bewerbungen, die eine schnellere und sicherere Vermittlung garantieren.
+    • Physische Unterstützung: Ein echtes Büro auf Gran Canaria für Ihre Sicherheit.`
   },
   no: {
     register_title: "Kandidatregistrering",
@@ -177,7 +203,9 @@ const translations = {
     apply_here: "Søk her",
     submit_btn: "Generer CV og fortsett",
     legal_title: "JURIDISK MERKNAD OG VILKÅR FOR BRUK",
-    legal_content: `MEGLINGSKONTRAKT OG DEPOSITUM:
+    legal_content: `Vi kobler ikke bare kandidater og selskaper sammen. Vi følger deg steg for steg på din arbeidsreise i utlandet. Selskapene vi samarbeider med i Nord-Europa mottar eksklusive søknader gjennom vårt nettverk, noe som garanterer målrettet utvelgelse og raskere plassering.
+
+    MEGLINGSKONTRAKT OG DEPOSITUM:
     Denne søke- og utvelglesestjenesten er gratis for konsultasjon.
     For å gå videre med ansettelsen og den fysiske kontraktssigneringen, må du imidlertid besøke vårt kontor:
     Adresse: Avenida de la Unión 32, Vecindario, Gran Canaria.
@@ -194,7 +222,12 @@ const translations = {
     accept_btn: "Jeg godtar og bekrefter søknaden",
     final_instruction: "Flott! Din CV er generert. Nå må du reise til Avenida de la Unión 32 (Vecindario) for å signere den fysiske kontrakten og betale depositumet på 300 € (refunderbart).",
     download_cv_btn: "Last ned din PDF-CV",
-    success_title: "Søknad sendt"
+    success_title: "Søknad sendt",
+    why_us_title: "Hvorfor søke gjennom oss",
+    why_us_content: `• Fullstendig veiledning: Fra bransjevalg til kontraktssignering.
+    • Eksklusivt nettverk: Direkte tilgang til utvalgte selskaper i Nord-Europa.
+    • Målrettet utvelgelse: Søknader som garanterer raskere og tryggere plassering.
+    • Fysisk støtte: Et ekte kontor på Gran Canaria for din trygghet.`
   }
 };
 

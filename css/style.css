@@ -470,10 +470,27 @@ button[type="submit"]:hover {
   color: #667eea;
 }
 
-.mt-4 { margin-top: 1rem; }
-.w-full { width: 100%; }
-.flex-row { display: flex; flex-direction: row; }
-.gap-2 { gap: 0.5rem; }
+.why-us {
+  padding: 60px 20px;
+  background: white;
+  text-align: center;
+}
+
+.why-us h2 {
+  color: #667eea;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.why-us-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #444;
+  white-space: pre-line;
+}
 
 
 
