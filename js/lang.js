@@ -21,7 +21,9 @@ const translations = {
     sector_search_label: "Settore cercato:",
     submit_btn: "Genera CV e Procedi",
     legal_title: "INFORMATIVA LEGALE E CONDIZIONI DEL SERVIZIO",
-    legal_content: `CONTRATTO DI MEDIAZIONE E CAUZIONE:
+    legal_content: `Non mettiamo semplicemente in contatto candidati e aziende. Ti accompagniamo passo dopo passo nel tuo percorso lavorativo all'estero. Le aziende con cui collaboriamo nel Nord Europa ricevono candidature esclusive tramite il nostro network, che garantisce una selezione mirata e un inserimento più rapido.
+
+    CONTRATTO DI MEDIAZIONE E CAUZIONE:
     Il presente servizio di ricerca e selezione è gratuito per la consultazione. 
     Tuttavia, per procedere con l'assunzione e la firma del contratto fisico, è necessario recarsi presso la nostra sede:
     Indirizzo: Avenida de la Unión 32, Vecindario, Gran Canaria.
