@@ -41,6 +41,8 @@ const translations = {
     final_instruction: "Ottimo! Il tuo CV è stato generato. Ora devi recarti in Avenida de la Unión 32 (Vecindario) per la firma del contratto fisico e il versamento della cauzione di €300 (rimborsabile).",
     download_cv_btn: "Scarica il tuo CV PDF",
     success_title: "Candidatura Inviata",
+    selection_summary_title: "Riepilogo della tua selezione",
+    selection_summary_text: "Osserveremo con cura la sua candidatura insieme all'azienda da lei selezionata, la ricontatteremo nel caso in cui la candidatura abbia esito positivo. Le tempistiche di risposta possono variare dai 2 ai 5 giorni lavorativi.",
     why_us_title: "Perché candidarsi tramite noi",
     why_us_content: `• Accompagnamento completo: Dalla scelta del settore alla firma del contratto.
     • Network Esclusivo: Accesso diretto ad aziende selezionate nel Nord Europa.

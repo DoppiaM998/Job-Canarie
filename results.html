@@ -63,6 +63,13 @@
   <div class="modal-content" id="modalStep3" style="display:none;">
     <span class="close-modal" onclick="closeCVModal()">&times;</span>
     <h2 data-i18n="success_title">Candidatura Inviata</h2>
+    
+    <div class="selection-summary-box">
+      <h4 data-i18n="selection_summary_title">Riepilogo della tua selezione</h4>
+      <div id="selection-details" class="selection-details"></div>
+      <p class="mt-4" data-i18n="selection_summary_text">Osserveremo con cura la sua candidatura insieme all'azienda da lei selezionata, la ricontatteremo nel caso in cui la candidatura abbia esito positivo. Le tempistiche di risposta possono variare dai 2 ai 5 giorni lavorativi.</p>
+    </div>
+
     <p class="final-instruction" data-i18n="final_instruction">Ottimo! Il tuo CV è stato generato. Ora devi recarti in Avenida de la Unión 32 (Vecindario) per la firma del contratto fisico e il versamento della cauzione di €300 (rimborsabile).</p>
     <button onclick="closeCVModal()" class="btn w-full">Chiudi</button>
   </div>
@@ -150,10 +157,19 @@ document.getElementById('confirmLegalBtn').onclick = function() {
   document.getElementById('modalStep2').style.display = "none";
   document.getElementById('modalStep3').style.display = "block";
   
+  // Mostra i dettagli della selezione
+  const params = new URLSearchParams(window.location.search);
+  const details = document.getElementById('selection-details');
+  if (details) {
+    details.innerHTML = `
+      <div class="summary-item"><strong>Paese:</strong> ${params.get('country') || '-'}</div>
+      <div class="summary-item"><strong>Settore:</strong> ${params.get('sector') || '-'}</div>
+      <div class="summary-item"><strong>Zona:</strong> ${params.get('zone') || '-'}</div>
+    `;
+  }
+  
   const targetUrl = document.getElementById('cvModal').dataset.targetUrl;
-  setTimeout(() => {
-    window.open(targetUrl, '_blank');
-  }, 3000);
+  // Non apriamo più il link esterno automaticamente, l'utente ha finito il processo qui.
 };
 
 window.onclick = function(event) {
