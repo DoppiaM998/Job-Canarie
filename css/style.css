@@ -386,13 +386,40 @@ button[type="submit"]:hover {
 
 .modal-content {
   background-color: #fff;
-  margin: 5% auto;
+  margin: 2% auto;
   padding: 30px;
   border-radius: 16px;
-  width: 90%;
-  max-width: 600px;
+  width: 95%;
+  max-width: 800px;
   position: relative;
   box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+/* Custom scrollbar for better visibility */
+.modal-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
+#modal-experience {
+  min-height: 300px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .close-modal {
@@ -656,13 +683,40 @@ footer {
 
 .modal-content {
   background-color: #fff;
-  margin: 5% auto;
+  margin: 2% auto;
   padding: 30px;
   border-radius: 16px;
-  width: 90%;
-  max-width: 600px;
+  width: 95%;
+  max-width: 800px;
   position: relative;
   box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+/* Custom scrollbar for better visibility */
+.modal-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
+#modal-experience {
+  min-height: 300px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .close-modal {
