@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Risultati Ricerca</title>
-  <link rel="stylesheet" href="css/style.css?v=20251226_v2">
+  <link rel="stylesheet" href="css/style.css?v=20251229_v5">
 </head>
 <body>
 
@@ -25,7 +25,7 @@
   <div class="modal-content" id="modalStep1">
     <span class="close-modal" onclick="closeCVModal()">&times;</span>
     <h2 data-i18n="register_title">Registrazione Candidato</h2>
-    <p data-i18n="register_subtitle">Inserisci i tuoi dati e genera il tuo CV PDF</p>
+    <p data-i18n="register_subtitle">Inserisci i tuoi dati e genera il tuo CV</p>
     <form id="modalRegisterForm" class="filter-grid">
       <div class="filter-item">
         <label for="modal-name" data-i18n="name_label">Nome Completo:</label>
@@ -43,7 +43,7 @@
         <label for="modal-experience" data-i18n="experience_label">Esperienze Lavorative:</label>
         <textarea id="modal-experience" rows="4" required></textarea>
       </div>
-      <button type="submit" class="btn btn-search" data-i18n="submit_btn">Genera CV e Procedi</button>
+      <button type="submit" class="btn btn-search" data-i18n="submit_btn">Procedi alla candidatura</button>
     </form>
   </div>
 
@@ -55,7 +55,7 @@
       <div class="legal-box" id="modal-legal-content" data-i18n="modal_legal_content"></div>
     </div>
     <div class="flex-row gap-2 mt-4">
-      <button id="confirmLegalBtn" class="btn" data-i18n="accept_btn">Accetto e Confermo Candidatura</button>
+      <button id="confirmLegalBtn" class="btn">Accetto e Confermo Candidatura</button>
     </div>
   </div>
 
@@ -69,16 +69,16 @@
       <p class="mt-4" data-i18n="selection_summary_text">Osserveremo con cura la sua candidatura insieme all'azienda da lei selezionata, la ricontatteremo nel caso in cui la candidatura abbia esito positivo. Le tempistiche di risposta possono variare dai 2 ai 5 giorni lavorativi.</p>
     </div>
 
-    <p class="final-instruction" data-i18n="final_instruction">Ottimo! Il tuo CV è stato generato. Ora devi recarti in Avenida de la Unión 32 (Vecindario) per la firma del contratto fisico e il versamento della cauzione di €300 (rimborsabile).</p>
+    <p class="final-instruction" data-i18n="final_instruction">Ottimo! La tua candidatura è stata inviata correttamente. Ora attendi un nostro contatto per i prossimi passi.</p>
     <button onclick="closeCVModal()" class="btn w-full">Chiudi</button>
   </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="js/lang.js?v=20251226_v2"></script>
-<script src="js/data.js?v=20251226_v2"></script>
-<script src="js/portals.js?v=20251226_v2"></script>
-<script src="js/results.js?v=20251226_v2"></script>
+<script src="js/lang.js?v=20251229_v5"></script>
+<script src="js/data.js?v=20251229_v5"></script>
+<script src="js/portals.js?v=20251229_v5"></script>
+<script src="js/results.js?v=20251229_v5"></script>
 
 <footer>
   <div class="footer-content">
@@ -141,17 +141,6 @@ document.getElementById('modalRegisterForm').onsubmit = function(e) {
   document.getElementById('modalStep2').style.display = "block";
 };
 
-document.getElementById('downloadPdfBtn').onclick = function() {
-  if (generatedPdfBlob) {
-    const url = URL.createObjectURL(generatedPdfBlob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `CV_${document.getElementById('modal-name').value.replace(/\s+/g, '_')}.pdf`;
-    a.click();
-    URL.revokeObjectURL(url);
-  }
-};
-
 document.getElementById('confirmLegalBtn').onclick = function() {
   document.getElementById('modalStep2').style.display = "none";
   document.getElementById('modalStep3').style.display = "block";
@@ -173,7 +162,6 @@ document.getElementById('confirmLegalBtn').onclick = function() {
     `;
   }
   
-  // Invia Email tramite EmailJS (Metodo client-side comune per siti statici)
   const name = document.getElementById('modal-name').value;
   const email = document.getElementById('modal-email').value;
   const phone = document.getElementById('modal-phone').value;
