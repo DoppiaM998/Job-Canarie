@@ -1,24 +1,46 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import nodemailer from "nodemailer";
 
 export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // put application routes here
-  // prefix all routes with /api
+  // Configurazione trasportatore email
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
+    }
+  });
 
   app.post("/api/send-email", async (req, res) => {
     try {
       const { to_email, subject, body, attachment } = req.body;
-      console.log(`[EMAIL] Ricevuta richiesta per ${to_email}`);
-      console.log(`[EMAIL] Oggetto: ${subject}`);
-      console.log(`[EMAIL] Corpo: ${body}`);
-      if (attachment) console.log("[EMAIL] Allegato PDF presente");
       
-      // Nota per lo sviluppatore: Qui andrebbe integrato un servizio email (SendGrid, Resend, etc.)
-      // Per ora simuliamo il successo dell'invio
+      const mailOptions: any = {
+        from: process.env.EMAIL_USER,
+        to: to_email,
+        subject: subject,
+        text: body
+      };
+
+      if (attachment) {
+        // attachment è una stringa base64 "data:application/pdf;base64,..."
+        const base64Data = attachment.split(',')[1];
+        mailOptions.attachments = [
+          {
+            filename: 'CV_Candidato.pdf',
+            content: base64Data,
+            encoding: 'base64'
+          }
+        ];
+      }
+
+      await transporter.sendMail(mailOptions);
+      console.log(`[EMAIL] Inviata correttamente a ${to_email}`);
       res.json({ success: true, message: "Email inviata correttamente" });
     } catch (error) {
       console.error("[EMAIL] Errore:", error);
