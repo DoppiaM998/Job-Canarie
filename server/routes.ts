@@ -40,11 +40,16 @@ export async function registerRoutes(
       }
 
       await transporter.sendMail(mailOptions);
-      console.log(`[EMAIL] Inviata correttamente a ${to_email}`);
+      console.log(`[EMAIL SUCCESS] Inviata correttamente a ${to_email}`);
       res.json({ success: true, message: "Email inviata correttamente" });
-    } catch (error) {
-      console.error("[EMAIL] Errore:", error);
-      res.status(500).json({ success: false, error: "Errore durante l'invio" });
+    } catch (error: any) {
+      console.error("[EMAIL ERROR] Dettagli errore:", {
+        message: error.message,
+        code: error.code,
+        command: error.command,
+        response: error.response
+      });
+      res.status(500).json({ success: false, error: "Errore durante l'invio", details: error.message });
     }
   });
 
