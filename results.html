@@ -49,13 +49,12 @@
 
   <div class="modal-content" id="modalStep2" style="display:none;">
     <span class="close-modal" onclick="closeCVModal()">&times;</span>
-    <h2 data-i18n="legal_step_title">Conferma Informative Legali</h2>
+    <h2 data-i18n="legal_step_title">Conferma Condizioni</h2>
     <div class="legal-scroll-area">
-      <p data-i18n="legal_step_text">Per completare la candidatura, devi leggere e accettare le condizioni contrattuali e la gestione della cauzione.</p>
-      <div class="legal-box" id="modal-legal-content" data-i18n="legal_content"></div>
+      <p data-i18n="legal_step_text">Per completare la candidatura, devi leggere e accettare le condizioni contrattuali e il funzionamento del servizio.</p>
+      <div class="legal-box" id="modal-legal-content" data-i18n="modal_legal_content"></div>
     </div>
     <div class="flex-row gap-2 mt-4">
-      <button id="downloadPdfBtn" class="btn variant-outline" data-i18n="download_cv_btn">Scarica il tuo CV PDF</button>
       <button id="confirmLegalBtn" class="btn" data-i18n="accept_btn">Accetto e Confermo Candidatura</button>
     </div>
   </div>
@@ -186,7 +185,6 @@ document.getElementById('confirmLegalBtn').onclick = function() {
     reader.onloadend = function() {
       const base64data = reader.result;
       
-      // Prepariamo i dati per EmailJS o un endpoint backend
       const emailParams = {
         to_email: "manuelmorey527@gmail.com",
         subject: `Nuova Candidatura da ${name}`,
@@ -207,11 +205,6 @@ document.getElementById('confirmLegalBtn').onclick = function() {
         attachment: base64data
       };
 
-      // Nota: Per un'implementazione reale senza backend server-side, 
-      // useremo un servizio come EmailJS o un semplice fetch a un endpoint.
-      // Qui simuliamo l'invio o usiamo un servizio pre-configurato.
-      console.log("Invio email a manuelmorey527@gmail.com...", emailParams);
-      
       fetch('/api/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

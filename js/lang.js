@@ -1,7 +1,7 @@
 const translations = {
-  it: {
+    it: {
     register_title: "Registrazione Candidato",
-    register_subtitle: "Inserisci i tuoi dati e genera il tuo CV PDF",
+    register_subtitle: "Inserisci i tuoi dati e genera il tuo CV",
     email_label: "Email:",
     phone_label: "Telefono:",
     sector_preference_label: "Settore di Interesse:",
@@ -15,11 +15,11 @@ const translations = {
     job_portals: "Portali di Lavoro Consigliati",
     apply_here: "Candidati qui",
     cleaning_sector: "Pulizie e Igienizzazione",
-    upload_cv_title: "Invio CV Ridotto",
+    upload_cv_title: "Invio CV",
     name_label: "Nome:",
     experience_label: "Esperienze Lavorative Rilevanti:",
     sector_search_label: "Settore cercato:",
-    submit_btn: "Genera CV e Procedi",
+    submit_btn: "Procedi alla candidatura",
     legal_title: "INFORMATIVA LEGALE E CONDIZIONI DEL SERVIZIO",
     legal_content: `Non mettiamo semplicemente in contatto candidati e aziende. Ti accompagniamo passo dopo passo nel tuo percorso lavorativo all'estero. Le aziende con cui collaboriamo nel Nord Europa ricevono candidature esclusive tramite il nostro network, che garantisce una selezione mirata e un inserimento più rapido.
 
@@ -29,16 +29,23 @@ const translations = {
     Indirizzo: Avenida de la Unión 32, Vecindario, Gran Canaria.
 
     CAUZIONE E RIMBORSO:
-    - Il candidato dovrà versare una cauzione prestabilita di €300.
+    - Il candidato dovrà versare una cauzione prestabilita.
     - Tale cauzione sarà interamente rimborsata non appena verrà confermata la presenza del lavoratore sul luogo di lavoro.
     - La conferma avviene tramite verifica diretta dell'azienda ospitante e invio di una foto del lavoratore presso la sede lavorativa.
     
     PENALI:
     In caso di mancata presentazione o abbandono ingiustificato prima dell'inizio del rapporto, la cauzione non sarà restituita.`,
-    legal_step_title: "Conferma Informative Legali",
-    legal_step_text: "Per completare la candidatura, devi leggere e accettare le condizioni contrattuali e la gestione della cauzione.",
+    legal_step_title: "Conferma Condizioni",
+    legal_step_text: "Per completare la candidatura, devi leggere e accettare le condizioni contrattuali e il funzionamento del servizio.",
     accept_btn: "Accetto e Confermo Candidatura",
-    final_instruction: "Ottimo! Il tuo CV è stato generato. Ora devi recarti in Avenida de la Unión 32 (Vecindario) per la firma del contratto fisico e il versamento della cauzione di €300 (rimborsabile).",
+    modal_legal_content: `CONDIZIONI DI SERVIZIO E PROCESSO DI ASSUNZIONE:
+    1. LETTURA E ACCETTAZIONE: Il candidato dichiara di aver letto e accettato le condizioni contrattuali.
+    2. VALUTAZIONE: La sua candidatura sarà osservata con cura insieme all'azienda selezionata.
+    3. CONTATTO ED ESITO: La ricontatteremo per informarla dell'esito della selezione.
+    4. APPUNTAMENTO FISICO: In caso di esito positivo, dovrà recarsi presso il nostro ufficio in Avenida de la Unión 32, Vecindario, Gran Canaria, per la redazione del contratto.
+    5. CAUZIONE: È richiesto il versamento di una cauzione prestabilita che verrà rimborsata integralmente una volta confermata la sua presenza sul luogo di lavoro tramite foto e conferma dell'azienda.
+    6. PENALE: In caso di mancata presentazione o abbandono ingiustificato, la cauzione non sarà restituita.`,
+    final_instruction: "Ottimo! La tua candidatura è stata inviata correttamente. Ora attendi un nostro contatto per i prossimi passi.",
     download_cv_btn: "Scarica il tuo CV PDF",
     success_title: "Candidatura Inviata",
     selection_summary_title: "Riepilogo della tua selezione",
