@@ -160,16 +160,65 @@ document.getElementById('confirmLegalBtn').onclick = function() {
   // Mostra i dettagli della selezione
   const params = new URLSearchParams(window.location.search);
   const details = document.getElementById('selection-details');
+  const selectionData = {
+    country: params.get('country') || '-',
+    sector: params.get('sector') || '-',
+    zone: params.get('zone') || '-'
+  };
+
   if (details) {
     details.innerHTML = `
-      <div class="summary-item"><strong>Paese:</strong> ${params.get('country') || '-'}</div>
-      <div class="summary-item"><strong>Settore:</strong> ${params.get('sector') || '-'}</div>
-      <div class="summary-item"><strong>Zona:</strong> ${params.get('zone') || '-'}</div>
+      <div class="summary-item"><strong>Paese:</strong> ${selectionData.country}</div>
+      <div class="summary-item"><strong>Settore:</strong> ${selectionData.sector}</div>
+      <div class="summary-item"><strong>Zona:</strong> ${selectionData.zone}</div>
     `;
   }
   
-  const targetUrl = document.getElementById('cvModal').dataset.targetUrl;
-  // Non apriamo più il link esterno automaticamente, l'utente ha finito il processo qui.
+  // Invia Email tramite EmailJS (Metodo client-side comune per siti statici)
+  const name = document.getElementById('modal-name').value;
+  const email = document.getElementById('modal-email').value;
+  const phone = document.getElementById('modal-phone').value;
+  const experience = document.getElementById('modal-experience').value;
+
+  if (generatedPdfBlob) {
+    const reader = new FileReader();
+    reader.readAsDataURL(generatedPdfBlob);
+    reader.onloadend = function() {
+      const base64data = reader.result;
+      
+      // Prepariamo i dati per EmailJS o un endpoint backend
+      const emailParams = {
+        to_email: "manuelmorey527@gmail.com",
+        subject: `Nuova Candidatura da ${name}`,
+        body: `
+          Nuova candidatura ricevuta:
+          Nome: ${name}
+          Email: ${email}
+          Telefono: ${phone}
+          
+          Dettagli Selezione:
+          Paese: ${selectionData.country}
+          Settore: ${selectionData.sector}
+          Zona: ${selectionData.zone}
+          
+          Esperienze:
+          ${experience}
+        `,
+        attachment: base64data
+      };
+
+      // Nota: Per un'implementazione reale senza backend server-side, 
+      // useremo un servizio come EmailJS o un semplice fetch a un endpoint.
+      // Qui simuliamo l'invio o usiamo un servizio pre-configurato.
+      console.log("Invio email a manuelmorey527@gmail.com...", emailParams);
+      
+      fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(emailParams)
+      }).catch(err => console.error("Errore invio email:", err));
+    };
+  }
 };
 
 window.onclick = function(event) {
