@@ -57,7 +57,10 @@ function displayJobPortals(country, sector, zone) {
     <div class="portals-grid">
       ${portals.map(portal => `
         <div class="portal-card">
-          <h4>${portal.name}</h4>
+          <div>
+            <h4>${portal.name}</h4>
+            ${portal.salary ? `<div class="salary-info">${portal.salary}</div>` : ''}
+          </div>
           <button onclick="openCVModal('${portal.url}')" class="btn" data-i18n="apply_here">Candidati qui</button>
         </div>
       `).join('')}

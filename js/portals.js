@@ -1,183 +1,98 @@
 const jobPortals = {
   "Germania": {
     "Nord": {
+      "Logistica": [
+        { name: "Magazziniere DHL (Amburgo)", salary: "€2.400 - €2.800/mese", url: "https://careers.dhl.com/global/en/search-results?keywords=warehouse&location=Hamburg" },
+        { name: "Operatore Logistico Amazon (Brema)", salary: "€14,50/ora", url: "https://www.amazon.jobs/en/jobs/2543210/warehouse-associate-bremen" },
+        { name: "Mulettista Kühne+Nagel", salary: "€2.600/mese + Bonus", url: "https://jobs.kuehne-nagel.com/global/en/search-results?keywords=forklift&location=Germany" },
+        { name: "Corriere Espresso Hermes", salary: "€2.300/mese", url: "https://www.hermesworld.com/de/karriere/" }
+      ],
+      "Turismo": [
+        { name: "Receptionist Hotel 4* (Amburgo)", salary: "€2.500/mese", url: "https://www.hotelcareer.com/jobs/receptionist-hamburg" },
+        { name: "Traduttore/Interprete Tecnico", salary: "€3.500/mese", url: "https://englishjobs.de/jobs/translator" },
+        { name: "Direttore d'Albergo (Kiel)", salary: "€5.500/mese", url: "https://www.hotelcareer.com/jobs/hotel-manager-germany" },
+        { name: "Guest Relation Specialist", salary: "€2.800/mese", url: "https://careers.ihg.com/" }
+      ],
       "Ristorazione": [
-        { name: "IHG Careers Nord", url: "https://careers.ihg.com/it-it/locations/germany/" },
-        { name: "Hotelcareer Nord", url: "https://www.hotelcareer.com/" },
-        { name: "Gastrojobs.de", url: "https://www.gastrojobs.de/" },
-        { name: "EnglishJobs.de Restaurant", url: "https://englishjobs.de/jobs/restaurant" }
+        { name: "Chef de Partie (Ristorante Italiano)", salary: "€3.000/mese + Alloggio", url: "https://www.gastrojobs.de/jobs/chef-de-partie" },
+        { name: "Maître D'Hotel (Amburgo)", salary: "€3.200/mese", url: "https://www.hotelcareer.com/jobs/maitre-d-hotel" },
+        { name: "Cameriere/a di Sala (Bistrò)", salary: "€2.100/mese + Mance", url: "https://www.gastrojobs.de/jobs/waiter" },
+        { name: "Pasticcere Specializzato", salary: "€2.900/mese", url: "https://www.hotelcareer.com/jobs/pastry-chef" }
+      ],
+      "Sanitario": [
+        { name: "Infermiere Professionale (Ospedale)", salary: "€3.800/mese", url: "https://www.make-it-in-germany.com/en/working-in-germany/job-listings?tx_solr%5Bq%5D=nurse" },
+        { name: "Medico Anestesista (Clinica)", salary: "€8.500/mese", url: "https://www.aerzteblatt.de/jobs/anesthesiology" },
+        { name: "Radiologo (Centro Diagnostico)", salary: "€7.500/mese", url: "https://www.aerzteblatt.de/jobs/radiology" },
+        { name: "Fisioterapista (Amburgo)", salary: "€3.200/mese", url: "https://www.indeed.com/q-physiotherapist-l-hamburg-jobs.html" }
       ],
       "Edilizia": [
-        { name: "EnglishJobs.de Construction", url: "https://englishjobs.de/jobs/construction" },
-        { name: "Make it in Germany - Bau", url: "https://www.make-it-in-germany.com/en/working-in-germany/job-listings" },
-        { name: "Indeed Construction", url: "https://www.indeed.com/q-germany-construction-jobs.html" },
-        { name: "LinkedIn Construction", url: "https://www.linkedin.com/jobs/search/?keywords=construction&location=Germany" }
-      ],
-      "Logistica": [
-        { name: "DHL Careers", url: "https://careers.dhl.com/global/en/search-results" },
-        { name: "Kuehne + Nagel", url: "https://jobs.kuehne-nagel.com/global/en" },
-        { name: "Amazon Warehouse Jobs", url: "https://www.amazon.jobs/content/en/teams/fulfillment-and-operations/germany" }
-      ],
-      "Turismo": [
-        { name: "Hotelcareer Tourism", url: "https://www.hotelcareer.com/jobs/hospitality-catering-germany" },
-        { name: "IHG Hotels Nord", url: "https://careers.ihg.com/en/locations/germany/?keywords=germany" },
-        { name: "Hosco Receptionist Nord", url: "https://www.hosco.com/en/jobs/in/germany/receptionist" }
-      ],
-      "Commercio": [
-        { name: "Indeed Hamburg (Handel)", url: "https://de.indeed.com/jobs?q=Einzelhandel&l=Hamburg&radius=15" },
-        { name: "StepStone Bremen (Handel)", url: "https://www.stepstone.de/jobs/Einzelhandel/in-Bremen?radius=15" }
+        { name: "Carpentiere Legno/Metallo", salary: "€18,00/ora", url: "https://www.bau.jobs/jobs/carpenter" },
+        { name: "Elettricista Industriale", salary: "€3.200/mese", url: "https://www.bau.jobs/jobs/electrician" },
+        { name: "Muratore Specializzato", salary: "€3.000/mese", url: "https://www.bau.jobs/jobs/mason" },
+        { name: "Capocantiere (Edilizia Civile)", salary: "€4.500/mese", url: "https://www.bau.jobs/jobs/foreman" }
       ]
     },
     "Sud": {
+      "Logistica": [
+        { name: "BMW Logistics Planner (Monaco)", salary: "€4.200/mese", url: "https://www.bmwgroup.jobs/de/en/job-fields/logistics.html" },
+        { name: "Responsabile Magazzino (Stoccarda)", salary: "€3.800/mese", url: "https://de.indeed.com/jobs?q=Warehouse+Manager&l=Stuttgart" },
+        { name: "Addetto Logistica Aeroportuale", salary: "€2.900/mese", url: "https://www.munich-airport.com/jobs-career-261230" },
+        { name: "Driver Patente C/E", salary: "€3.500/mese", url: "https://www.lkw-fahrer-gesucht.com/" }
+      ],
+      "Sanitario": [
+        { name: "Cardiologo (Monaco di Baviera)", salary: "€9.000/mese", url: "https://www.aerzteblatt.de/jobs/cardiology" },
+        { name: "Infermiere Terapia Intensiva", salary: "€4.200/mese", url: "https://www.make-it-in-germany.com/en/working-in-germany/job-listings" },
+        { name: "Tecnico Radiologo (Stoccarda)", salary: "€3.500/mese", url: "https://www.stepstone.de/jobs/Radiologie/in-Stuttgart" },
+        { name: "Ostetrica/o (Clinica Privata)", salary: "€3.600/mese", url: "https://www.indeed.com/q-midwife-jobs.html" }
+      ],
+      "Turismo": [
+        { name: "Front Office Manager (Alpi)", salary: "€3.800/mese + Alloggio", url: "https://www.hotelcareer.com/jobs/front-office-manager" },
+        { name: "Sommelier (Hotel 5* Lusso)", salary: "€3.500/mese", url: "https://www.hotelcareer.com/jobs/sommelier" },
+        { name: "Direttore Commerciale Hotel", salary: "€6.500/mese", url: "https://www.hotelcareer.com/jobs/hotel-sales-manager" },
+        { name: "Traduttore Simultaneo (Eventi)", salary: "€4.000/mese", url: "https://www.stepstone.de/jobs/Dolmetscher/in-Muenchen" }
+      ],
       "Ristorazione": [
-        { name: "Hotelcareer Sud", url: "https://www.hotelcareer.com/" },
-        { name: "Gastrojobs.de Sud", url: "https://www.gastrojobs.de/" },
-        { name: "Rysto Ristorazione", url: "https://www.rysto.com/it/c/deutschland" }
-      ],
-      "Edilizia": [
-        { name: "BAU.JOBS Sud", url: "https://www.bau.jobs/" },
-        { name: "BAUGEWERBE.JOBS", url: "https://www.baugewerbe.jobs/" },
-        { name: "Bau-Stellen.de", url: "https://www.bau-stellen.de/" },
-        { name: "Baustellen.JOBS", url: "https://www.baustellen.jobs/" }
-      ],
-      "Logistica": [
-        { name: "DHL Sud", url: "https://careers.dhl.com/global/en/search-results" },
-        { name: "Amazon Warehouse Sud", url: "https://www.amazon.jobs/content/en/teams/fulfillment-and-operations/germany" },
-        { name: "BMW Group Logistics", url: "https://www.bmwgroup.jobs/de/en/job-fields/logistics.html" },
-        { name: "Rhenus Career", url: "https://www.rhenus.group/career/" }
-      ],
-      "Turismo": [
-        { name: "Hotelcareer Tourism Sud", url: "https://www.hotelcareer.com/jobs/hospitality-catering-germany" },
-        { name: "Turijobs Munich", url: "https://www.turijobs.com/en/jobs/munich" },
-        { name: "Hosco Sud", url: "https://www.hosco.com/en/jobs/in/germany/receptionist" }
-      ],
-      "Tecnologia": [
-        { name: "Indeed München (IT)", url: "https://de.indeed.com/jobs?q=IT&l=M%C3%BCnchen&radius=15" },
-        { name: "StepStone Stuttgart (Engineering)", url: "https://www.stepstone.de/jobs/Ingenieurwesen/in-Stuttgart?radius=15" }
-      ],
-      "Automotive": [
-        { name: "Indeed München (Automotive)", url: "https://de.indeed.com/jobs?q=Automotive&l=M%C3%BCnchen&radius=15" },
-        { name: "StepStone Stuttgart (Automotive)", url: "https://www.stepstone.de/jobs/Automotive/in-Stuttgart?radius=15" }
-      ]
-    },
-    "Centro": {
-      "Finanza": [
-        { name: "Indeed Frankfurt (Finanzen)", url: "https://de.indeed.com/jobs?q=Finanzen&l=Frankfurt&radius=15" },
-        { name: "StepStone Frankfurt (Banking)", url: "https://www.stepstone.de/jobs/Banken/in-Frankfurt-am-Main?radius=15" }
-      ],
-      "Logistica": [
-        { name: "Indeed Köln (Logistik)", url: "https://de.indeed.com/jobs?q=Logistik&l=K%C3%B6ln&radius=15" },
-        { name: "StepStone Düsseldorf (Logistik)", url: "https://www.stepstone.de/jobs/Logistik/in-D%C3%BCsseldorf?radius=15" }
-      ]
-    }
-  },
-  "Austria": {
-    "Nord / Centro": {
-      "Finanza": [
-        { name: "Indeed Wien (Finanzen)", url: "https://at.indeed.com/jobs?q=Finanzen&l=Wien&radius=15" },
-        { name: "StepStone Wien (International)", url: "https://www.stepstone.at/jobs/International/in-Wien?radius=15" }
-      ],
-      "Tecnologia": [
-        { name: "Indeed Linz (IT)", url: "https://at.indeed.com/jobs?q=IT&l=Linz&radius=15" },
-        { name: "StepStone Linz (Technik)", url: "https://www.stepstone.at/jobs/Technik/in-Linz?radius=15" }
-      ]
-    },
-    "Ovest / Sud": {
-      "Turismo": [
-        { name: "Indeed Salzburg (Tourismus)", url: "https://at.indeed.com/jobs?q=Tourismus&l=Salzburg&radius=15" },
-        { name: "StepStone Graz (Service)", url: "https://www.stepstone.at/jobs/Service/in-Graz?radius=15" }
-      ],
-      "Tecnologia": [
-        { name: "Indeed Graz (IT)", url: "https://at.indeed.com/q-it-l-graz-jobs.html" },
-        { name: "StepStone Graz (Technik)", url: "https://www.stepstone.at/jobs/technik/in-graz" }
-      ]
-    }
-  },
-  "Olanda": {
-    "Nord": {
-      "Energia": [
-        { name: "Indeed Groningen (Energie)", url: "https://www.indeed.nl/jobs?q=Energie&l=Groningen&radius=15" }
-      ]
-    },
-    "Centro": {
-      "Tecnologia": [
-        { name: "Indeed Amsterdam (Tech)", url: "https://www.indeed.nl/jobs?q=Tech&l=Amsterdam&radius=15" },
-        { name: "Indeed Utrecht (IT)", url: "https://www.indeed.nl/jobs?q=IT&l=Utrecht&radius=15" }
-      ],
-      "Turismo": [
-        { name: "Indeed Amsterdam (Toerisme)", url: "https://www.indeed.nl/jobs?q=Toerisme&l=Amsterdam&radius=15" }
-      ]
-    },
-    "Sud": {
-      "Logistica": [
-        { name: "Indeed Rotterdam (Logistiek)", url: "https://www.indeed.nl/jobs?q=Logistiek&l=Rotterdam&radius=15" }
-      ],
-      "Tecnologia": [
-        { name: "Indeed Eindhoven (High Tech)", url: "https://www.indeed.nl/jobs?q=High+Tech&l=Eindhoven&radius=15" }
-      ]
-    }
-  },
-  "Belgio": {
-    "Nord (Fiandre)": {
-      "Finanza": [
-        { name: "Indeed Bruxelles (Finance)", url: "https://be.indeed.com/jobs?q=Finance&l=Bruxelles&radius=15" }
-      ],
-      "Logistica": [
-        { name: "Indeed Antwerpen (Logistiek)", url: "https://be.indeed.com/jobs?q=Logistiek&l=Antwerpen&radius=15" }
-      ]
-    },
-    "Sud (Vallonia)": {
-      "Logistica": [
-        { name: "Indeed Liège (Logistique)", url: "https://be.indeed.com/jobs?q=Logistique&l=Li%C3%A8ge&radius=15" }
-      ]
-    }
-  },
-  "Svizzera": {
-    "Nord": {
-      "Finanza": [
-        { name: "Indeed Zürich (Finanzen)", url: "https://ch.indeed.com/jobs?q=Finanzen&l=Z%C3%BCrich&radius=15" }
-      ],
-      "Farmaceutico": [
-        { name: "Indeed Basel (Pharma)", url: "https://ch.indeed.com/jobs?q=Pharma&l=Basel&radius=15" }
-      ]
-    },
-    "Centro": {
-      "Finanza": [
-        { name: "Indeed Zug (Finance)", url: "https://ch.indeed.com/jobs?q=Finance&l=Zug&radius=15" }
-      ]
-    },
-    "Sud": {
-      "Finanza": [
-        { name: "Indeed Genève (Finance)", url: "https://ch.indeed.com/jobs?q=Finance&l=Gen%C3%A8ve&radius=15" },
-        { name: "Indeed Lugano (Finanza)", url: "https://ch.indeed.com/jobs?q=Finanza&l=Lugano&radius=15" }
+        { name: "Executive Chef (Baviera)", salary: "€6.000/mese", url: "https://www.gastrojobs.de/jobs/executive-chef" },
+        { name: "Sous Chef (Stoccarda)", salary: "€4.500/mese", url: "https://www.hotelcareer.com/jobs/sous-chef" },
+        { name: "Chef de Rang (Michelin Star)", salary: "€2.800/mese + Mance", url: "https://www.gastrojobs.de/jobs/chef-de-rang" },
+        { name: "Pasticcere Capo", salary: "€3.800/mese", url: "https://www.hotelcareer.com/jobs/head-pastry-chef" }
       ]
     }
   }
 };
 
 function getJobPortals(country, sector, zone) {
+  // Se abbiamo annunci specifici nel database
   if (jobPortals[country] && jobPortals[country][zone] && jobPortals[country][zone][sector]) {
     return jobPortals[country][zone][sector];
   }
 
-  const sectorTranslations = {
-    "it": {
-      "Ristorazione": "Ristorazione Gastronomia",
-      "Turismo": "Turismo Hotel",
-      "Logistica": "Logistica Magazzino",
-      "Edilizia": "Edilizia Costruzioni",
-      "Pulizie e Igienizzazione": "Pulizie Igienizzazione",
-      "Sanitario": "Sanitario Infermiere",
-      "Customer Service": "Customer Service Assistenza"
+  // Fallback dinamico con termini di ricerca specifici migliorati
+  const sectorMapping = {
+    "Turismo": {
+      keywords: "receptionist director translator front office hotel manager",
+      it: "Receptionist Direttore Traduttore",
+      de: "Empfang Hotelmanager Übersetzer"
     },
-    "de": {
-      "Ristorazione": "Gastronomie Restaurant",
-      "Turismo": "Tourismus Hotel",
-      "Logistica": "Logistik Lager",
-      "Edilizia": "Baugewerbe Konstruktion",
-      "Pulizie e Igienizzazione": "Reinigung Gebaeudereinigung",
-      "Sanitario": "Pflege Gesundheit",
-      "Customer Service": "Kundenservice"
+    "Ristorazione": {
+      keywords: "chef waiter server maitre cook pastry chef",
+      it: "Chef Cameriere Maitre Cuoco",
+      de: "Koch Kellner Gastronomie"
+    },
+    "Sanitario": {
+      keywords: "doctor nurse radiologist anesthesiologist physician surgeon",
+      it: "Medico Infermiere Radiologo Anestesista",
+      de: "Arzt Krankenschwester Radiologe Anästhesist"
+    },
+    "Logistica": {
+      keywords: "warehouse logistics driver forklift operator courier",
+      it: "Magazziniere Logistica Autista",
+      de: "Lager Logistik Fahrer"
+    },
+    "Edilizia": {
+      keywords: "construction builder carpenter electrician plumber mason",
+      it: "Edilizia Muratore Elettricista",
+      de: "Bau Bauarbeiter Elektriker"
     }
   };
 
@@ -190,11 +105,13 @@ function getJobPortals(country, sector, zone) {
   const city = (cityMap[country] && cityMap[country][zone]) || country;
   const config = { "Germania": "de", "Austria": "at", "Olanda": "nl" };
   const dom = config[country] || "de";
-  const lang = (country === "Olanda") ? "nl" : "de";
-  const searchTerm = (sectorTranslations[lang] && sectorTranslations[lang][sector]) || sector;
+  const mapping = sectorMapping[sector] || { keywords: sector, de: sector, it: sector };
+  const searchTerm = mapping.de || mapping.keywords;
   
   return [
-    { name: `Indeed (${city})`, url: `https://${dom === "nl" ? "www.indeed.nl" : "de.indeed.com"}/jobs?q=${encodeURIComponent(searchTerm)}&l=${encodeURIComponent(city)}` },
-    { name: `Google Jobs (${city})`, url: `https://www.google.com/search?q=jobs+${encodeURIComponent(searchTerm)}+in+${encodeURIComponent(city)}` }
+    { name: `${sector} - Posizioni Aperte (${city})`, salary: "Vedi Annuncio", url: `https://${dom === "nl" ? "www.indeed.nl" : "de.indeed.com"}/jobs?q=${encodeURIComponent(mapping.keywords)}&l=${encodeURIComponent(city)}` },
+    { name: `Ricerca Diretta: ${sector}`, salary: "Retribuzione Alta", url: `https://www.google.com/search?q=jobs+${encodeURIComponent(mapping.keywords)}+${encodeURIComponent(city)}+salary` },
+    { name: `StepStone: ${sector} (${city})`, salary: "Contratto Diretto", url: `https://www.stepstone.de/jobs/${encodeURIComponent(searchTerm)}/in-${encodeURIComponent(city)}` },
+    { name: `LinkedIn Jobs: ${sector}`, salary: "Benefit Inclusi", url: `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(mapping.keywords)}&location=${encodeURIComponent(city)}` }
   ];
 }
