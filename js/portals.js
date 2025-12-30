@@ -4,16 +4,62 @@ const jobPortals = {
   "Germania": {
     "Nord": {
       "Ristorazione": [
-        { name: "Indeed Hamburg (Gastronomie)", url: "https://de.indeed.com/jobs?q=Gastronomie&l=Hamburg&radius=15" },
-        { name: "StepStone Bremen (Gastronomie)", url: "https://www.stepstone.de/jobs/Gastronomie/in-Bremen?radius=15" }
+        { name: "IHG Careers Nord", url: "https://careers.ihg.com/it-it/locations/germany/" },
+        { name: "Hotelcareer Nord", url: "https://www.hotelcareer.com/" },
+        { name: "Gastrojobs.de", url: "https://www.gastrojobs.de/" },
+        { name: "EnglishJobs.de Restaurant", url: "https://englishjobs.de/jobs/restaurant" }
+      ],
+      "Edilizia": [
+        { name: "EnglishJobs.de Construction", url: "https://englishjobs.de/jobs/construction" },
+        { name: "Make it in Germany - Bau", url: "https://www.make-it-in-germany.com/en/working-in-germany/job-listings" },
+        { name: "Indeed Construction", url: "https://www.indeed.com/q-germany-construction-jobs.html" },
+        { name: "LinkedIn Construction", url: "https://www.linkedin.com/jobs/search/?keywords=construction&location=Germany" }
       ],
       "Logistica": [
-        { name: "Indeed Hamburg (Logistik)", url: "https://de.indeed.com/jobs?q=Logistik&l=Hamburg&radius=15" },
-        { name: "StepStone Bremen (Logistik)", url: "https://www.stepstone.de/jobs/Logistik/in-Bremen?radius=15" }
+        { name: "DHL Careers", url: "https://careers.dhl.com/global/en/search-results" },
+        { name: "Kuehne + Nagel", url: "https://jobs.kuehne-nagel.com/global/en" },
+        { name: "Amazon Warehouse Jobs", url: "https://www.amazon.jobs/content/en/teams/fulfillment-and-operations/germany" }
+      ],
+      "Turismo": [
+        { name: "Hotelcareer Tourism", url: "https://www.hotelcareer.com/jobs/hospitality-catering-germany" },
+        { name: "IHG Hotels Nord", url: "https://careers.ihg.com/en/locations/germany/?keywords=germany" },
+        { name: "Hosco Receptionist Nord", url: "https://www.hosco.com/en/jobs/in/germany/receptionist" }
       ],
       "Commercio": [
         { name: "Indeed Hamburg (Handel)", url: "https://de.indeed.com/jobs?q=Einzelhandel&l=Hamburg&radius=15" },
         { name: "StepStone Bremen (Handel)", url: "https://www.stepstone.de/jobs/Einzelhandel/in-Bremen?radius=15" }
+      ]
+    },
+    "Sud": {
+      "Ristorazione": [
+        { name: "Hotelcareer Sud", url: "https://www.hotelcareer.com/" },
+        { name: "Gastrojobs.de Sud", url: "https://www.gastrojobs.de/" },
+        { name: "Rysto Ristorazione", url: "https://www.rysto.com/it/c/deutschland" }
+      ],
+      "Edilizia": [
+        { name: "BAU.JOBS Sud", url: "https://www.bau.jobs/" },
+        { name: "BAUGEWERBE.JOBS", url: "https://www.baugewerbe.jobs/" },
+        { name: "Bau-Stellen.de", url: "https://www.bau-stellen.de/" },
+        { name: "Baustellen.JOBS", url: "https://www.baustellen.jobs/" }
+      ],
+      "Logistica": [
+        { name: "DHL Sud", url: "https://careers.dhl.com/global/en/search-results" },
+        { name: "Amazon Warehouse Sud", url: "https://www.amazon.jobs/content/en/teams/fulfillment-and-operations/germany" },
+        { name: "BMW Group Logistics", url: "https://www.bmwgroup.jobs/de/en/job-fields/logistics.html" },
+        { name: "Rhenus Career", url: "https://www.rhenus.group/career/" }
+      ],
+      "Turismo": [
+        { name: "Hotelcareer Tourism Sud", url: "https://www.hotelcareer.com/jobs/hospitality-catering-germany" },
+        { name: "Turijobs Munich", url: "https://www.turijobs.com/en/jobs/munich" },
+        { name: "Hosco Sud", url: "https://www.hosco.com/en/jobs/in/germany/receptionist" }
+      ],
+      "Tecnologia": [
+        { name: "Indeed München (IT)", url: "https://de.indeed.com/jobs?q=IT&l=M%C3%BCnchen&radius=15" },
+        { name: "StepStone Stuttgart (Engineering)", url: "https://www.stepstone.de/jobs/Ingenieurwesen/in-Stuttgart?radius=15" }
+      ],
+      "Automotive": [
+        { name: "Indeed München (Automotive)", url: "https://de.indeed.com/jobs?q=Automotive&l=M%C3%BCnchen&radius=15" },
+        { name: "StepStone Stuttgart (Automotive)", url: "https://www.stepstone.de/jobs/Automotive/in-Stuttgart?radius=15" }
       ]
     },
     "Centro": {
@@ -24,16 +70,6 @@ const jobPortals = {
       "Logistica": [
         { name: "Indeed Köln (Logistik)", url: "https://de.indeed.com/jobs?q=Logistik&l=K%C3%B6ln&radius=15" },
         { name: "StepStone Düsseldorf (Logistik)", url: "https://www.stepstone.de/jobs/Logistik/in-D%C3%BCsseldorf?radius=15" }
-      ]
-    },
-    "Sud": {
-      "Tecnologia": [
-        { name: "Indeed München (IT)", url: "https://de.indeed.com/jobs?q=IT&l=M%C3%BCnchen&radius=15" },
-        { name: "StepStone Stuttgart (Engineering)", url: "https://www.stepstone.de/jobs/Ingenieurwesen/in-Stuttgart?radius=15" }
-      ],
-      "Automotive": [
-        { name: "Indeed München (Automotive)", url: "https://de.indeed.com/jobs?q=Automotive&l=M%C3%BCnchen&radius=15" },
-        { name: "StepStone Stuttgart (Automotive)", url: "https://www.stepstone.de/jobs/Automotive/in-Stuttgart?radius=15" }
       ]
     }
   },
