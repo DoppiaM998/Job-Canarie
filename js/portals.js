@@ -1,5 +1,3 @@
-// Portali di lavoro per ogni paese, settore e zona
-// Ogni zona copre un raggio di ~15km con ricerche mirate
 const jobPortals = {
   "Germania": {
     "Nord": {
@@ -90,8 +88,8 @@ const jobPortals = {
         { name: "StepStone Graz (Service)", url: "https://www.stepstone.at/jobs/Service/in-Graz?radius=15" }
       ],
       "Tecnologia": [
-        { name: "Indeed Graz (IT)", url: "https://at.indeed.com/jobs?q=IT&l=Graz&radius=15" },
-        { name: "StepStone Graz (Technik)", url: "https://www.stepstone.at/jobs/Technik/in-Graz?radius=15" }
+        { name: "Indeed Graz (IT)", url: "https://at.indeed.com/q-it-l-graz-jobs.html" },
+        { name: "StepStone Graz (Technik)", url: "https://www.stepstone.at/jobs/technik/in-graz" }
       ]
     }
   },
@@ -157,9 +155,11 @@ const jobPortals = {
   }
 };
 
-// Funzione per ottenere i portali di lavoro per un paese, settore e zona
 function getJobPortals(country, sector, zone) {
-  // Mappatura traduzioni per ricerche dirette
+  if (jobPortals[country] && jobPortals[country][zone] && jobPortals[country][zone][sector]) {
+    return jobPortals[country][zone][sector];
+  }
+
   const sectorTranslations = {
     "it": {
       "Ristorazione": "Ristorazione Gastronomia",
@@ -178,88 +178,23 @@ function getJobPortals(country, sector, zone) {
       "Pulizie e Igienizzazione": "Reinigung Gebaeudereinigung",
       "Sanitario": "Pflege Gesundheit",
       "Customer Service": "Kundenservice"
-    },
-    "nl": {
-      "Ristorazione": "Horeca Restaurant",
-      "Turismo": "Toerisme Hotel",
-      "Logistica": "Logistiek Magazijn",
-      "Edilizia": "Bouw Constructie",
-      "Pulizie e Igienizzazione": "Schoonmaak",
-      "Sanitario": "Gezondheidszorg",
-      "Customer Service": "Klantenservice"
-    },
-    "es": {
-      "Ristorazione": "Restauracion Gastronomia",
-      "Turismo": "Turismo Hotel",
-      "Logistica": "Logistica Almacen",
-      "Edilizia": "Construccion Edificacion",
-      "Pulizie e Igienizzazione": "Limpieza Higienizacion",
-      "Sanitario": "Sanitario Enfermeria",
-      "Customer Service": "Atencion al Cliente"
     }
   };
 
   const cityMap = {
     "Germania": { "Nord": "Hamburg", "Centro": "Frankfurt", "Sud": "Munich" },
     "Austria": { "Nord / Centro": "Vienna", "Ovest / Sud": "Salzburg" },
-    "Olanda": { "Nord": "Groningen", "Centro": "Amsterdam", "Sud": "Rotterdam" },
-    "Belgio": { "Nord (Fiandre)": "Brussels", "Sud (Vallonia)": "Liege" },
-    "Svizzera": { "Nord": "Zurich", "Centro": "Zug", "Sud": "Geneva" }
+    "Olanda": { "Nord": "Groningen", "Centro": "Amsterdam", "Sud": "Rotterdam" }
   };
 
   const city = (cityMap[country] && cityMap[country][zone]) || country;
+  const config = { "Germania": "de", "Austria": "at", "Olanda": "nl" };
+  const dom = config[country] || "de";
+  const lang = (country === "Olanda") ? "nl" : "de";
+  const searchTerm = (sectorTranslations[lang] && sectorTranslations[lang][sector]) || sector;
   
-  // Dominio e Lingua per nazione
-  const config = {
-    "Germania": { dom: "de", lang: "de" },
-    "Austria": { dom: "at", lang: "de" },
-    "Olanda": { dom: "nl", lang: "nl" },
-    "Belgio": { dom: "be", lang: "nl" },
-    "Svizzera": { dom: "ch", lang: "de" },
-    "Portogallo": { dom: "pt", lang: "pt" }
-  };
-  
-  const c = config[country] || { dom: "com", lang: "en" };
-  const searchTerm = (sectorTranslations[c.lang] && sectorTranslations[c.lang][sector]) || sector;
-  const encodedSearch = encodeURIComponent(searchTerm);
-  const encodedCity = encodeURIComponent(city);
-
-  const portals = [
-    { 
-      name: `Google Jobs (${city})`, 
-      url: `https://www.google.com/search?q=jobs+${encodedSearch}+in+${encodedCity}` 
-    },
-    { 
-      name: `Indeed Direct (${city})`, 
-      url: `https://${c.dom === "nl" ? "www.indeed.nl" : "de.indeed.com"}/jobs?q=${encodedSearch}&l=${encodedCity}&radius=15` 
-    },
-    { 
-      name: `LinkedIn Direct (${city})`, 
-      url: `https://www.linkedin.com/jobs/search/?keywords=${encodedSearch}&location=${encodedCity}` 
-    },
-    { 
-      name: `StepStone (${city})`, 
-      url: `https://www.stepstone.${c.dom === "at" ? "at" : "de"}/jobs/${encodedSearch}/in-${encodedCity}` 
-    }
+  return [
+    { name: `Indeed (${city})`, url: `https://${dom === "nl" ? "www.indeed.nl" : "de.indeed.com"}/jobs?q=${encodeURIComponent(searchTerm)}&l=${encodeURIComponent(city)}` },
+    { name: `Google Jobs (${city})`, url: `https://www.google.com/search?q=jobs+${encodeURIComponent(searchTerm)}+in+${encodeURIComponent(city)}` }
   ];
-
-  // Aggiunta aziende specifiche per settore e città
-  const specificCompanies = {
-    "Ristorazione": ["Vapiano", "L'Osteria", "Marriott Hotels", "Hilton"],
-    "Logistica": ["DHL", "Amazon Fulfillment", "FedEx", "DB Schenker"],
-    "Edilizia": ["Hochtief", "Bilfinger", "Strabag", "Züblin"],
-    "Sanitario": ["Helios Kliniken", "Asklepios", "Sana Kliniken"],
-    "Pulizie e Igienizzazione": ["Dussmann Service", "Piepenbrock", "Wisag"]
-  };
-
-  if (specificCompanies[sector]) {
-    specificCompanies[sector].forEach(company => {
-      portals.push({
-        name: `${company} Careers (${city})`,
-        url: `https://www.google.com/search?q=${encodeURIComponent(company)}+careers+${encodedCity}+${encodedSearch}`
-      });
-    });
-  }
-
-  return portals;
 }
