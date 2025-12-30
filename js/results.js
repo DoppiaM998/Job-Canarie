@@ -14,7 +14,7 @@ function displayResults(results, country, sector, zone) {
   if (results.length === 0) {
     resultsContainer.innerHTML = `
       <div style="grid-column: 1/-1; text-align: center; padding: 40px;">
-        <p>Ecco alcune proposte per te:</p>
+        <p data-i18n="proposals_for_you">Ecco alcune proposte per te:</p>
         ${displayJobPortals(country, sector, zone)}
       </div>
     `;
