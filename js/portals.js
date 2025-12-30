@@ -39,19 +39,44 @@ const jobPortals = {
     }
   },
   "Olanda": {
-    "Centro": {
-      "Logistica": [
-        { name: "Warehouse Worker (Amsterdam)", salary: "€2.550/mese", url: "https://www.indeed.nl/jobs?q=warehouse&l=Amsterdam" },
-        { name: "Mulettista (Utrecht)", salary: "€16,00/ora", url: "https://www.randstad.nl/vacatures/logistiek" },
-        { name: "Driver Delivery PostNL", salary: "€2.200/mese", url: "https://www.postnl.nl/over-postnl/werken-bij-postnl/" }
-      ],
+    "Nord": {
       "Turismo": [
-        { name: "Receptionist Hotel (Amsterdam)", salary: "€2.300/mese", url: "https://www.hoteljob.nl/vacatures/receptionist" },
-        { name: "Hotel Director (Utrecht)", salary: "€6.000/mese", url: "https://www.indeed.nl/q-hotel-manager-jobs.html" }
+        { name: "Hotel Professionals NL", salary: "€2.400 - €3.100/mese", url: "https://www.hotelprofessionals.nl/en/hotel-jobs" },
+        { name: "Hozpitality NL", salary: "€2.300/mese", url: "https://nl.hozpitality.com/hospitality-jobs/" },
+        { name: "Kom Werken in de Horeca", salary: "€2.200 - €2.800/mese", url: "https://www.komwerkenindehoreca.nl/" }
+      ],
+      "Ristorazione": [
+        { name: "Indeed Hospitality NL", salary: "€2.100 - €3.500/mese", url: "https://www.indeed.com/q-hospitality-jobs-Netherlands.html" },
+        { name: "EnglishJobs Restaurant NL", salary: "€2.200/mese + Alloggio", url: "https://englishjobs.de/jobs/restaurant" },
+        { name: "Bakeca Estero Olanda", salary: "€2.000 - €2.600/mese", url: "https://estero.bakeca.it/dettaglio/offerte-di-lavoro-estero/ristorazione-in-olanda-posizioni-aperte-in-cucina-e-sala-3xdr223840736" }
+      ],
+      "Edilizia": [
+        { name: "Construction Jobs NL", salary: "€2.800 - €4.200/mese", url: "https://englishjobsearch.nl/jobs/construction" },
+        { name: "Bowers Construction", salary: "€3.000/mese", url: "https://bowers.nl/construction-jobs-in-the-netherlands/" },
+        { name: "Oranjegroep Construction", salary: "€2.900/mese", url: "https://www.oranjegroep.com/construction" }
       ],
       "Sanitario": [
-        { name: "Infermiere Registrato (BIG)", salary: "€3.800/mese", url: "https://www.werkenbijvumc.nl/vacatures" },
-        { name: "Radiologo Specialist (Rotterdam)", salary: "€7.000/mese", url: "https://www.medicalpharma.nl/vacatures" }
+        { name: "MediCarrera Healthcare", salary: "€4.500 - €7.500/mese", url: "https://medicarrera.com/jobs-netherlands/" },
+        { name: "Care Force Medical", salary: "€5.000+/mese", url: "https://www.care-force.com/" },
+        { name: "Glassdoor Healthcare NL", salary: "€4.000/mese", url: "https://www.glassdoor.com/Job/netherlands-healthcare-jobs-SRCH_IL.0%2C11_IN178_KO12%2C22.htm" }
+      ]
+    },
+    "Sud": {
+      "Turismo": [
+        { name: "Hotel Professionals NL", salary: "€2.400 - €3.100/mese", url: "https://www.hotelprofessionals.nl/en/hotel-jobs" },
+        { name: "Hozpitality NL", salary: "€2.300/mese", url: "https://nl.hozpitality.com/hospitality-jobs/" }
+      ],
+      "Ristorazione": [
+        { name: "Indeed Hospitality NL", salary: "€2.100 - €3.500/mese", url: "https://www.indeed.com/q-hospitality-jobs-Netherlands.html" },
+        { name: "Bakeca Estero Olanda", salary: "€2.000 - €2.600/mese", url: "https://estero.bakeca.it/dettaglio/offerte-di-lavoro-estero/ristorazione-in-olanda-posizioni-aperte-in-cucina-e-sala-3xdr223840736" }
+      ],
+      "Edilizia": [
+        { name: "Concreeto Construction", salary: "€2.800 - €3.800/mese", url: "https://concreeto.nl/en/vacancies/construction" },
+        { name: "Glassdoor Construction NL", salary: "€3.200/mese", url: "https://www.glassdoor.it/Job/netherlands-construction-jobs-SRCH_IL.0%2C11_IN178_KO12%2C24.htm" }
+      ],
+      "Sanitario": [
+        { name: "MediCarrera Healthcare", salary: "€4.500 - €7.500/mese", url: "https://medicarrera.com/jobs-netherlands/" },
+        { name: "Care Force Medical", salary: "€5.000+/mese", url: "https://www.care-force.com/" }
       ]
     }
   },
@@ -107,7 +132,7 @@ function getJobPortals(country, sector, zone) {
   const cityMap = {
     "Germania": { "Nord": "Hamburg", "Centro": "Frankfurt", "Sud": "Munich" },
     "Austria": { "Nord / Centro": "Vienna", "Ovest / Sud": "Salzburg" },
-    "Olanda": { "Nord": "Groningen", "Centro": "Amsterdam", "Sud": "Rotterdam" },
+    "Olanda": { "Nord": "Amsterdam", "Sud": "Rotterdam" },
     "Svizzera": { "Nord": "Zurich", "Sud": "Geneva" },
     "Portogallo": { "Sud": "Faro", "Centro": "Lisbon" },
     "Svezia": { "Centro": "Stockholm" }
