@@ -134,13 +134,39 @@ const jobPortals = {
     }
   },
   "Portogallo": {
+    "Nord": {
+      "Turismo": [
+        { name: "EnglishJobs Hotel District", salary: "€1.400 - €1.800/mese", url: "https://englishjobs.pt/jobs/hospitality" },
+        { name: "Turijobs Porto", salary: "€1.300/mese", url: "https://www.turijobs.pt/emprego-hotelaria-turismo-porto" },
+        { name: "PHC Hotels Recruitment", salary: "€1.500/mese", url: "https://www.phchotels.pt/en/recruitment/" }
+      ],
+      "Ristorazione": [
+        { name: "Bolsa de Empregabilidade", salary: "€1.200 - €1.600/mese", url: "https://bolsadeempregabilidade.pt/" },
+        { name: "Glassdoor Hospitality PT", salary: "€1.250/mese", url: "https://www.glassdoor.com/Job/portugal-hospitality-jobs-SRCH_IL.0,8_IN195_KO9,20.htm" }
+      ],
+      "Edilizia": [
+        { name: "EnglishJobs Construction", salary: "€1.800 - €2.500/mese", url: "https://englishjobs.pt/jobs/construction" },
+        { name: "Timing.pt Technical", salary: "€1.700/mese", url: "https://timing.pt/" }
+      ],
+      "Sanitario": [
+        { name: "LinkedIn Healthcare PT", salary: "€2.500 - €4.500/mese", url: "https://www.linkedin.com/jobs/search/?location=Portugal" }
+      ]
+    },
     "Sud": {
       "Turismo": [
-        { name: "Receptionist Hotel 5* (Algarve)", salary: "€1.400/mese + Alloggio", url: "https://www.net-empregos.com/pesquisa-emprego.asp?chaves=recepcionista&cidade=Algarve" },
-        { name: "Hotel Manager (Faro)", salary: "€2.800/mese", url: "https://www.turijobs.pt/emprego-hotelaria-turismo-portugal" }
+        { name: "JobsInPortugal Algarve", salary: "€1.400 - €1.900/mese", url: "https://jobsinportugal.net/" },
+        { name: "PHC Hotels Recruitment", salary: "€1.500/mese", url: "https://www.phchotels.pt/en/recruitment/" }
       ],
-      "Customer Service": [
-        { name: "Italian Speaker CS (Lisbona)", salary: "€1.200/mese + Bonus", url: "https://www.teleperformance.com/en-us/jobs/search-jobs/?country=Portugal" }
+      "Ristorazione": [
+        { name: "Glassdoor Hospitality PT", salary: "€1.250/mese", url: "https://www.glassdoor.com/Job/portugal-hospitality-jobs-SRCH_IL.0,8_IN195_KO9,20.htm" },
+        { name: "Bolsa de Empregabilidade", salary: "€1.200 - €1.600/mese", url: "https://bolsadeempregabilidade.pt/" }
+      ],
+      "Edilizia": [
+        { name: "Timing.pt Algarve", salary: "€1.800/mese", url: "https://timing.pt/" },
+        { name: "EnglishJobs Construction", salary: "€1.800 - €2.500/mese", url: "https://englishjobs.pt/jobs/construction" }
+      ],
+      "Pulizie": [
+        { name: "Glassdoor Cleaner PT", salary: "€1.100 - €1.400/mese", url: "https://www.glassdoor.com/Job/portugal-cleaner-jobs-SRCH_IL.0,8_IN195_KO9,16.htm" }
       ]
     }
   }
