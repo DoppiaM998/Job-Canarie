@@ -122,6 +122,46 @@ const jobPortals = {
       ]
     }
   },
+  "Belgio": {
+    "Nord": {
+      "Turismo": [
+        { name: "LinkedIn Hotel Antwerp", salary: "€2.400 - €3.200/mese", url: "https://be.linkedin.com/jobs/jobs-in-antwerp" },
+        { name: "Bakeago Leuven Jobs", salary: "€2.300/mese", url: "https://www.bakeago.com/annunci-offerte-lavoro-all-estero/leuven" },
+        { name: "Accent Jobs Belgium", salary: "€2.500/mese", url: "https://accentjobs.be/en/employees/specializations" }
+      ],
+      "Ristorazione": [
+        { name: "Rysto Belgium Gastronomy", salary: "€2.100 - €3.000/mese", url: "https://www.rysto.com/it/c/belgio" },
+        { name: "LinkedIn Restaurant Gent", salary: "€2.200/mese", url: "https://www.linkedin.com/jobs/search/?location=Gent%2C%20Belgium" }
+      ],
+      "Edilizia": [
+        { name: "Accent Jobs Construction", salary: "€2.800 - €3.800/mese", url: "https://accentjobs.be/en/employees/specializations" },
+        { name: "LinkedIn Construction Gent", salary: "€2.700/mese", url: "https://www.linkedin.com/jobs/search/?location=Gent%2C%20Belgium" }
+      ],
+      "Logistica": [
+        { name: "Aurawoo Logistics BE", salary: "€2.400 - €3.100/mese", url: "https://www.aurawoo.com/job-industry/unskilled-workers/belgium/" },
+        { name: "Accent Jobs Logistics", salary: "€2.500/mese", url: "https://accentjobs.be/en/employees/specializations" }
+      ]
+    },
+    "Sud": {
+      "Turismo": [
+        { name: "Bakeago Brussels Jobs", salary: "€2.500 - €3.500/mese", url: "https://www.bakeago.com/annunci-offerte-lavoro-all-estero/brussels" },
+        { name: "LinkedIn Hotel Belgium", salary: "€2.400/mese", url: "https://www.linkedin.com/jobs/search/?keywords=hotel&location=Belgium" }
+      ],
+      "Ristorazione": [
+        { name: "Rysto Brussels Cuisine", salary: "€2.200 - €3.100/mese", url: "https://www.rysto.com/it/c/belgio" },
+        { name: "Bakeago Brussels Gastro", salary: "€2.300/mese", url: "https://www.bakeago.com/annunci-offerte-lavoro-all-estero/brussels" }
+      ],
+      "Edilizia": [
+        { name: "Bakeca Estero Maintenance", salary: "€2.600 - €3.400/mese", url: "https://estero.bakeca.it/dettaglio/offerte-di-lavoro-estero/tecnico-manutentore-in-belgio-32um287513582" },
+        { name: "Accent Jobs Construction", salary: "€2.800/mese", url: "https://accentjobs.be/en/employees/specializations" }
+      ],
+      "Sanitario": [
+        { name: "LinkedIn Nurse Belgium", salary: "€3.500 - €5.500/mese", url: "https://www.linkedin.com/jobs/search/?keywords=nurse&location=Belgium" },
+        { name: "MediNation Healthcare", salary: "€3.800+/mese", url: "https://medination.be/en/job-offers/category/logistics-and-facilities" }
+      ]
+    }
+  },
+
   "Svezia": {
     "Centro": {
       "Tecnologia": [
