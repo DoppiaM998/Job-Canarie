@@ -251,36 +251,48 @@ h2 {
 
 #results {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
   margin-top: 40px;
 }
 
 .result-card {
   background: white;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+  padding: 35px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
-.portals-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
+.result-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+  border-color: #667eea;
 }
 
-@media (min-width: 992px) {
-  .portals-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.result-card h4 {
+  font-size: 1.6rem;
+  color: #4a3a8a;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.result-card .badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
 .portal-card {
-  background: #fcfcfc;
-  padding: 15px;
-  border-radius: 12px;
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
   border: 1px solid #eee;
   text-align: center;
   transition: all 0.3s ease;
@@ -288,24 +300,21 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
 .portal-card:hover {
-  border-color: #667eea;
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+  border-color: #764ba2;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(118, 75, 162, 0.12);
 }
 
-.portal-card h4 {
-  font-size: 0.95rem;
-  margin-bottom: 12px;
-  color: #333;
-}
-
-.portal-card .salary-info {
-  font-size: 0.85rem;
-  color: #667eea;
-  font-weight: 700;
-  margin-bottom: 10px;
+.salary-info {
+  background: rgba(102, 126, 234, 0.05);
+  padding: 10px;
+  border-radius: 12px;
+  margin: 15px 0;
+  border-left: 4px solid #667eea;
 }
 
 .portal-card .btn {
