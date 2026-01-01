@@ -82,13 +82,43 @@ const jobPortals = {
   },
   "Svizzera": {
     "Nord": {
-      "Finanza": [
-        { name: "Senior Analyst (Zurigo)", salary: "CHF 8.500/mese", url: "https://www.jobs.ch/en/vacancies/?term=finance&location=Zurich" },
-        { name: "Wealth Manager (Basilea)", salary: "CHF 10.000/mese", url: "https://www.efinancialcareers.ch/jobs-Switzerland-Zurich.br01201" }
+      "Turismo": [
+        { name: "Jobs.ch Hospitality", salary: "CHF 4.500 - 6.500/mese", url: "https://www.jobs.ch/en/" },
+        { name: "Swizjob.ch Turismo", salary: "CHF 4.200/mese", url: "https://swizjob.ch/it/home-it/" },
+        { name: "SwissHospitalityJobs", salary: "CHF 5.000/mese", url: "https://www.swisshospitalityjobs.com/" }
+      ],
+      "Ristorazione": [
+        { name: "Jobs.ch Gastronomia", salary: "CHF 4.000 - 5.500/mese", url: "https://www.jobs.ch/en/" },
+        { name: "Swizjob.ch Ristorazione", salary: "CHF 4.200/mese", url: "https://swizjob.ch/it/home-it/" },
+        { name: "Carriera.ch Gastronomia", salary: "CHF 4.500/mese", url: "https://www.carriera.ch/offerte/annunci-offerte-lavoro_gastronomia_210_0.html" }
+      ],
+      "Edilizia": [
+        { name: "Jobs.ch Edilizia", salary: "CHF 5.500 - 7.500/mese", url: "https://www.jobs.ch/en/" },
+        { name: "Swizjob.ch Costruzioni", salary: "CHF 5.800/mese", url: "https://swizjob.ch/it/home-it/" },
+        { name: "Jobs.esperto.ch Edilizia", salary: "CHF 6.000/mese", url: "https://jobs.esperto.ch/" }
       ],
       "Sanitario": [
-        { name: "Infermiere (Zurigo)", salary: "CHF 6.200/mese", url: "https://www.jobs.ch/en/vacancies/?term=nurse&location=Zurich" },
-        { name: "Medico Specialista (Bern)", salary: "CHF 15.000/mese", url: "https://www.fmh.ch/dienstleistungen/stellenmarkt.html" }
+        { name: "Jobs.ch Sanità", salary: "CHF 6.500 - 9.500/mese", url: "https://www.jobs.ch/en/" },
+        { name: "Swizjob.ch Salute", salary: "CHF 7.000/mese", url: "https://swizjob.ch/it/home-it/" },
+        { name: "Jobs.esperto.ch Sanitario", salary: "CHF 7.500/mese", url: "https://jobs.esperto.ch/" }
+      ]
+    },
+    "Sud": {
+      "Turismo": [
+        { name: "Jobs.ch Hospitality", salary: "CHF 4.500 - 6.500/mese", url: "https://www.jobs.ch/en/" },
+        { name: "Lavoro Ticino Turismo", salary: "CHF 4.000/mese", url: "https://lavoro.cdt.ch/" }
+      ],
+      "Ristorazione": [
+        { name: "Swizjob.ch Ristorazione", salary: "CHF 4.200/mese", url: "https://swizjob.ch/it/home-it/" },
+        { name: "Tioffrolavoro Gastro", salary: "CHF 4.100/mese", url: "https://www.tioffrolavoro.com/" }
+      ],
+      "Edilizia": [
+        { name: "Jobs.ch Edilizia", salary: "CHF 5.500 - 7.500/mese", url: "https://www.jobs.ch/en/" },
+        { name: "Jobs.esperto.ch Edilizia", salary: "CHF 6.000/mese", url: "https://jobs.esperto.ch/" }
+      ],
+      "Sanitario": [
+        { name: "Jobs.ch Sanità", salary: "CHF 6.500 - 9.500/mese", url: "https://www.jobs.ch/en/" },
+        { name: "Swizjob.ch Salute", salary: "CHF 7.000/mese", url: "https://swizjob.ch/it/home-it/" }
       ]
     }
   },
