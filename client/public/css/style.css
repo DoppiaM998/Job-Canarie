@@ -232,20 +232,23 @@ nav a:hover {
 .lang-selector button {
   padding: 8px 12px;
   margin: 0 5px;
-  background-color: #667eea;
+  background-color: #3a4a9f;
   color: white;
-  border: none;
+  border: 2px solid #2d3a7d;
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .lang-selector button:hover {
-  background-color: #764ba2;
+  background-color: #4a5abf;
+  border-color: #3a4a9f;
 }
 
 .lang-selector button.active {
-  background-color: #764ba2;
+  background-color: #5a2d82;
+  border-color: #4a1d72;
 }
 
 .country-banner {
