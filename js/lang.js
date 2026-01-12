@@ -30,10 +30,11 @@ const translations = {
     Tuttavia, per procedere con l'assunzione e la firma del contratto fisico, è necessario recarsi presso la nostra sede:
     Indirizzo: Avenida de la Unión 32, Vecindario, Gran Canaria.
 
-    CAUZIONE E RIMBORSO:
+    CAUZIONE E RIMBORSO TOTALE:
     - Il candidato dovrà versare una cauzione prestabilita.
-    - Tale cauzione sarà interamente rimborsata non appena verrà confermata la presenza del lavoratore sul luogo di lavoro.
-    - La conferma avviene tramite verifica diretta dell'azienda ospitante e invio di una foto del lavoratore presso la sede lavorativa.
+    - Tale cauzione sarà interamente rimborsata non appena il lavoratore arriva sul posto di lavoro.
+    - Questo ci permette di avere la certezza che le persone interessate si presentino effettivamente nel luogo e nel giorno indicati, salvo imprevisti gravi.
+    - La conferma avviene tramite verifica diretta dell'azienda e invio di una foto del lavoratore presso la sede lavorativa.
     
     PENALI:
     In caso di mancata presentazione o abbandono ingiustificato prima dell'inizio del rapporto, la cauzione non sarà restituita.`,
@@ -45,9 +46,9 @@ const translations = {
     2. VALUTAZIONE: La sua candidatura sarà osservata con cura insieme all'azienda selezionata.
     3. CONTATTO ED ESITO: La ricontatteremo per informarla dell'esito della selezione.
     4. APPUNTAMENTO FISICO: In caso di esito positivo, dovrà recarsi presso il nostro ufficio in Avenida de la Unión 32, Vecindario, Gran Canaria, per la redazione del contratto.
-    5. CAUZIONE: È richiesto il versamento di una cauzione prestabilita che verrà rimborsata integralmente una volta confermata la sua presenza sul luogo di lavoro tramite foto e conferma dell'azienda.
+    5. CAUZIONE E RIMBORSO TOTALE: È richiesto il versamento di una cauzione prestabilita. Tale cauzione sarà interamente rimborsata non appena arriverà sul posto di lavoro. Questa procedura garantisce la serietà della candidatura e la certezza della presenza nel giorno stabilito, salvo imprevisti gravi.
     6. PENALE: In caso di mancata presentazione o abbandono ingiustificato, la cauzione non sarà restituita.`,
-    final_instruction: "Ottimo! La tua candidatura è stata inviata correttamente. Ora attendi un nostro contatto per i prossimi passi.",
+    final_instruction: "Ottimo! La tua candidatura è stata inviata correttamente. Ora attendi un nostro contatto per i prossimi passi. La cauzione versata in sede sarà rimborsata totalmente al tuo arrivo sul posto di lavoro.",
     download_cv_btn: "Scarica il tuo CV PDF",
     success_title: "Candidatura Inviata",
     selection_summary_title: "Riepilogo della tua selezione",
@@ -89,9 +90,10 @@ const translations = {
     However, to proceed with the hiring and the physical contract signature, you must visit our office:
     Address: Avenida de la Unión 32, Vecindario, Gran Canaria.
 
-    DEPOSIT AND REFUND:
-    - The candidate must pay a pre-established deposit of €300.
-    - This deposit will be fully refunded as soon as the worker's presence at the workplace is confirmed.
+    DEPOSIT AND FULL REFUND:
+    - The candidate must pay a pre-established deposit.
+    - This deposit will be fully refunded as soon as the worker arrives at the workplace.
+    - This ensures that interested candidates will actually show up at the designated location on the agreed date, barring serious unforeseen circumstances.
     - Confirmation is done through direct verification by the host company and by sending a photo of the worker at the workplace.
     
     PENALTIES:
@@ -99,7 +101,7 @@ const translations = {
     legal_step_title: "Confirm Legal Information",
     legal_step_text: "To complete your application, you must read and accept the contractual conditions and the deposit management.",
     accept_btn: "I Accept and Confirm Application",
-    final_instruction: "Great! Your CV has been generated. Now you must go to Avenida de la Unión 32 (Vecindario) to sign the physical contract and pay the €300 deposit (refundable).",
+    final_instruction: "Great! Your CV has been generated. Now you must go to Avenida de la Unión 32 (Vecindario) to sign the physical contract and pay the deposit. The deposit will be fully refunded once you arrive at your workplace.",
     download_cv_btn: "Download your PDF CV",
     success_title: "Application Submitted",
     why_us_title: "Why apply through us",
@@ -139,9 +141,10 @@ const translations = {
     Sin embargo, para proceder con la contratación y la firma del contrato físico, es necesario acudir a nuestra oficina:
     Dirección: Avenida de la Unión 32, Vecindario, Gran Canaria.
 
-    FIANZA Y REEMBOLSO:
-    - El candidato deberá abonar una fianza preestablecida de 300€.
-    - Dicha fianza será reembolsada íntegramente en cuanto se confirme la presencia del trabajador en el lugar de trabajo.
+    FIANZA Y REEMBOLSO TOTAL:
+    - El candidato deberá abonar una fianza preestablecida.
+    - Dicha fianza será reembolsada íntegramente en cuanto el trabajador llegue al lugar de trabajo.
+    - Esto nos permite garantizar que las personas interesadas se presenten efectivamente en el lugar y día indicados, salvo imprevistos graves.
     - La confirmación se realiza mediante verificación directa de la empresa de acogida y envío de una foto del trabajador en el lugar de trabajo.
     
     PENALIZACIONES:
@@ -149,7 +152,7 @@ const translations = {
     legal_step_title: "Confirmar Información Legal",
     legal_step_text: "Para completar tu solicitud, debes leer y aceptar las condiciones contractuales y la gestión de la fianza.",
     accept_btn: "Acepto y Confirmo Solicitud",
-    final_instruction: "¡Genial! Tu CV ha sido generado. Ahora debes acudir a Avenida de la Unión 32 (Vecindario) para la firma del contrato físico y el pago de la fianza de 300€ (reembolsable).",
+    final_instruction: "¡Genial! Tu CV ha sido generado. Ahora debes acudir a Avenida de la Unión 32 (Vecindario) para la firma del contrato físico y el pago de la fianza. La fianza será reembolsada íntegramente al llegar al lugar de trabajo.",
     download_cv_btn: "Descargar tu CV en PDF",
     success_title: "Solicitud Enviada",
     why_us_title: "¿Por qué postular a través di noi?",
@@ -183,9 +186,10 @@ const translations = {
     Um jedoch mit der Einstellung und der Unterzeichnung des physischen Vertrags fortzufahren, müssen Sie unser Büro besuchen:
     Adresse: Avenida de la Unión 32, Vecindario, Gran Canaria.
 
-    KAUTION UND RÜCKERSTATTUNG:
-    - Der Kandidat muss eine vorher festgelegte Kaution von 300 € hinterlegen.
-    - Diese Kaution wird vollständig zurückerstattet, sobald die Anwesenheit des Arbeitnehmers am Arbeitsplatz bestätigt wurde.
+    KAUTION UND VOLLSTÄNDIGE RÜCKERSTATTUNG:
+    - Der Kandidat muss eine vorher festgelegte Kaution hinterlegen.
+    - Diese Kaution wird vollständig zurückerstattet, sobald der Arbeitnehmer am Arbeitsplatz eintrifft.
+    - Dies garantiert, dass interessierte Personen tatsächlich am vereinbarten Ort und Tag erscheinen, außer bei schwerwiegenden unvorhergesehenen Umständen.
     - Die Bestätigung erfolgt durch direkte Verifizierung durch das gastgebende Unternehmen und durch Senden eines Fotos des Arbeitnehmers am Arbeitsplatz.
     
     STRAFEN:
@@ -193,7 +197,7 @@ const translations = {
     legal_step_title: "Rechtliche Informationen bestätigen",
     legal_step_text: "Um Ihre Bewerbung abzuschließen, müssen Sie die Vertragsbedingungen und die Kautionsverwaltung lesen und akzeptieren.",
     accept_btn: "Ich akzeptiere und bestätige die Bewerbung",
-    final_instruction: "Super! Ihr Lebenslauf wurde erstellt. Jetzt müssen Sie zur Avenida de la Unión 32 (Vecindario) gehen, um den physischen Vertrag zu unterzeichnen und die Kaution von 300 € (rückzahlbar) zu hinterlegen.",
+    final_instruction: "Super! Ihr Lebenslauf wurde erstellt. Jetzt müssen Sie zur Avenida de la Unión 32 (Vecindario) gehen, um den physischen Vertrag zu unterzeichnen und die Kaution zu hinterlegen. Die Kaution wird bei Ankunft am Arbeitsplatz vollständig zurückerstattet.",
     download_cv_btn: "Laden Sie Ihren PDF-Lebenslauf herunter",
     success_title: "Bewerbung eingereicht",
     why_us_title: "Warum Sie sich über uns bewerben sollten",
@@ -227,9 +231,10 @@ const translations = {
     For å gå videre med ansettelsen og den fysiske kontraktssigneringen, må du imidlertid besøke vårt kontor:
     Adresse: Avenida de la Unión 32, Vecindario, Gran Canaria.
 
-    DEPOSITUM OG REFUSJON:
-    - Kandidaten må betale et forhåndsfastsatt depositum på 300 €.
-    - Dette depositumet vil bli fullt refundert så snart arbeidstakerens tilstedeværelse på arbeidsplassen er bekreftet.
+    DEPOSITUM OG FULL REFUSJON:
+    - Kandidaten må betale et forhåndsfastsatt depositum.
+    - Dette depositumet vil bli fullt refundert så snart arbeidstakeren ankommer arbeidsplassen.
+    - Dette sikrer at interesserte personer faktisk møter opp på avtalt sted og dag, med unntak av alvorlige uforutsette omstendigheter.
     - Bekreftelse skjer gjennom direkte verifisering av vertsselskapet og ved å sende et bilde av arbeidstakeren på arbeidsplassen.
     
     STRAFF:
@@ -237,7 +242,7 @@ const translations = {
     legal_step_title: "Bekreft juridisk informasjon",
     legal_step_text: "For å fullføre søknaden din, må du lese og godta kontraktsvilkårene og depositumshåndteringen.",
     accept_btn: "Jeg godtar og bekrefter søknaden",
-    final_instruction: "Flott! Din CV er generert. Nå må du reise til Avenida de la Unión 32 (Vecindario) for å signere den fysiske kontrakten og betale depositumet på 300 € (refunderbart).",
+    final_instruction: "Flott! Din CV er generert. Nå må du reise til Avenida de la Unión 32 (Vecindario) for å signere den fysiske kontrakten og betale depositumet. Depositumet vil bli fullt refundert når du ankommer arbeidsplassen.",
     download_cv_btn: "Last ned din PDF-CV",
     success_title: "Søknad sendt",
     why_us_title: "Hvorfor søke gjennom oss",
