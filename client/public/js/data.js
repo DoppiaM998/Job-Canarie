@@ -60,13 +60,13 @@ const countries = ["Germania", "Portogallo", "Olanda", "Belgio", "Austria", "Sve
 const sectors = ["Ristorazione", "Turismo", "Logistica", "Edilizia", "Pulizie e Igienizzazione", "Sanitario", "Customer Service", "Altro"];
 
 const zones = {
-  "Germania": ["Nord", "Centro", "Sud"],
-  "Portogallo": ["Nord", "Centro", "Sud"],
-  "Olanda": ["Nord", "Centro", "Sud"],
-  "Belgio": ["Nord", "Centro", "Sud"],
-  "Austria": ["Nord", "Centro", "Sud"],
-  "Svezia": ["Nord", "Centro", "Sud"],
-  "Svizzera": ["Nord", "Centro", "Sud"]
+  "Germania": ["Nord", "Sud"],
+  "Portogallo": ["Nord", "Sud"],
+  "Olanda": ["Nord", "Sud"],
+  "Belgio": ["Nord", "Sud"],
+  "Austria": ["Nord", "Sud"],
+  "Svezia": ["Nord", "Sud"],
+  "Svizzera": ["Nord", "Sud"]
 };
 
 function filterJobs(country, sector, zone) {
