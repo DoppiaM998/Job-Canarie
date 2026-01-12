@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Risultati Ricerca</title>
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/style.css?v=20251229_v5">
 </head>
 <body>
 
 <div class="lang-selector">
-  <button class="lang-btn active" data-lang="it" onclick="changeLanguage('it')">IT</button>
-  <button class="lang-btn" data-lang="en" onclick="changeLanguage('en')">EN</button>
-  <button class="lang-btn" data-lang="es" onclick="changeLanguage('es')">ES</button>
+  <button class="lang-btn active" data-lang="it" onclick="changeLanguage('it')" data-testid="button-lang-it">IT</button>
+  <button class="lang-btn" data-lang="en" onclick="changeLanguage('en')" data-testid="button-lang-en">EN</button>
+  <button class="lang-btn" data-lang="es" onclick="changeLanguage('es')" data-testid="button-lang-es">ES</button>
+  <button class="lang-btn" data-lang="de" onclick="changeLanguage('de')" data-testid="button-lang-de">DE</button>
+  <button class="lang-btn" data-lang="no" onclick="changeLanguage('no')" data-testid="button-lang-no">NO</button>
 </div>
 
 <section>
@@ -23,12 +25,193 @@
   <div id="results"></div>
 </section>
 
-<script src="js/lang.js?v=2"></script>
-<script src="js/data.js?v=2"></script>
-<script src="js/portals.js?v=2"></script>
-<script src="js/results.js?v=2"></script>
+<!-- Modal Registrazione CV -->
+<div id="cvModal" class="modal">
+  <div class="modal-content" id="modalStep1">
+    <span class="close-modal" onclick="closeCVModal()">&times;</span>
+    <h2 data-i18n="register_title">Registrazione Candidato</h2>
+    <p data-i18n="register_subtitle">Inserisci i tuoi dati e genera il tuo CV</p>
+    <form id="modalRegisterForm" class="filter-grid">
+      <div class="filter-item">
+        <label for="modal-name" data-i18n="name_label">Nome Completo:</label>
+        <input type="text" id="modal-name" required>
+      </div>
+      <div class="filter-item">
+        <label for="modal-email" data-i18n="email_label">Email:</label>
+        <input type="email" id="modal-email" required>
+      </div>
+      <div class="filter-item">
+        <label for="modal-phone" data-i18n="phone_label">Telefono:</label>
+        <input type="tel" id="modal-phone">
+      </div>
+      <div class="filter-item">
+        <label for="modal-experience" data-i18n="experience_label">Esperienze Lavorative:</label>
+        <textarea id="modal-experience" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-search" data-i18n="submit_btn">Procedi alla candidatura</button>
+    </form>
+  </div>
+
+  <div class="modal-content" id="modalStep2" style="display:none;">
+    <span class="close-modal" onclick="closeCVModal()">&times;</span>
+    <h2 data-i18n="legal_step_title">Conferma Condizioni</h2>
+    <div class="legal-scroll-area">
+      <p data-i18n="legal_step_text">Per completare la candidatura, devi leggere e accettare le condizioni contrattuali e il funzionamento del servizio.</p>
+      <div class="legal-box" id="modal-legal-content" data-i18n="modal_legal_content"></div>
+    </div>
+    <div class="flex-row gap-2 mt-4">
+      <button id="confirmLegalBtn" class="btn">Accetto e Confermo Candidatura</button>
+    </div>
+  </div>
+
+  <div class="modal-content" id="modalStep3" style="display:none;">
+    <span class="close-modal" onclick="closeCVModal()">&times;</span>
+    <h2 data-i18n="success_title">Candidatura Inviata</h2>
+    
+    <div class="selection-summary-box">
+      <h4 data-i18n="selection_summary_title">Riepilogo della tua selezione</h4>
+      <div id="selection-details" class="selection-details"></div>
+      <p class="mt-4" data-i18n="selection_summary_text">Osserveremo con cura la sua candidatura insieme all'azienda da lei selezionata, la ricontatteremo nel caso in cui la candidatura abbia esito positivo. Le tempistiche di risposta possono variare dai 2 ai 5 giorni lavorativi.</p>
+    </div>
+
+    <p class="final-instruction" data-i18n="final_instruction">Ottimo! La tua candidatura è stata inviata correttamente. Ora attendi un nostro contatto per i prossimi passi.</p>
+    <button onclick="closeCVModal()" class="btn w-full">Chiudi</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="js/lang.js?v=20251229_v5"></script>
+<script src="js/data.js?v=20251229_v5"></script>
+<script src="js/portals.js?v=20251229_v5"></script>
+<script src="js/results.js?v=20251229_v5"></script>
+
+<footer>
+  <div class="footer-content">
+    <button class="legal-toggle-btn" onclick="toggleLegal()">
+      <span data-i18n="legal_title">INFORMATIVA LEGALE E CONDIZIONI DEL SERVIZIO</span>
+      <span id="legal-icon">▼</span>
+    </button>
+    <div id="legal-text" class="legal-text" data-i18n="legal_content"></div>
+  </div>
+</footer>
 
 <script>
+function toggleLegal() {
+  const text = document.getElementById('legal-text');
+  const icon = document.getElementById('legal-icon');
+  text.classList.toggle('open');
+  icon.textContent = text.classList.contains('open') ? '▲' : '▼';
+}
+
+function openCVModal(targetUrl) {
+  const modal = document.getElementById('cvModal');
+  modal.style.display = "block";
+  modal.dataset.targetUrl = targetUrl;
+}
+
+function closeCVModal() {
+  document.getElementById('cvModal').style.display = "none";
+  document.getElementById('modalStep1').style.display = "block";
+  document.getElementById('modalStep2').style.display = "none";
+  document.getElementById('modalStep3').style.display = "none";
+}
+
+let generatedPdfBlob = null;
+
+document.getElementById('modalRegisterForm').onsubmit = function(e) {
+  e.preventDefault();
+  const name = document.getElementById('modal-name').value;
+  const email = document.getElementById('modal-email').value;
+  const phone = document.getElementById('modal-phone').value;
+  const experience = document.getElementById('modal-experience').value;
+  
+  // Genera PDF
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  doc.setFontSize(22);
+  doc.text("CURRICULUM VITAE", 105, 20, { align: "center" });
+  doc.setFontSize(14);
+  doc.text(`Nome: ${name}`, 20, 40);
+  doc.text(`Email: ${email}`, 20, 50);
+  doc.text(`Telefono: ${phone}`, 20, 60);
+  doc.text("Esperienze:", 20, 80);
+  doc.setFontSize(12);
+  const splitExp = doc.splitTextToSize(experience, 170);
+  doc.text(splitExp, 20, 90);
+  
+  generatedPdfBlob = doc.output('blob');
+  
+  // Passa allo step 2
+  document.getElementById('modalStep1').style.display = "none";
+  document.getElementById('modalStep2').style.display = "block";
+};
+
+document.getElementById('confirmLegalBtn').onclick = function() {
+  document.getElementById('modalStep2').style.display = "none";
+  document.getElementById('modalStep3').style.display = "block";
+  
+  // Mostra i dettagli della selezione
+  const params = new URLSearchParams(window.location.search);
+  const details = document.getElementById('selection-details');
+  const selectionData = {
+    country: params.get('country') || '-',
+    sector: params.get('sector') || '-',
+    zone: params.get('zone') || '-'
+  };
+
+  if (details) {
+    details.innerHTML = `
+      <div class="summary-item"><strong>Paese:</strong> ${selectionData.country}</div>
+      <div class="summary-item"><strong>Settore:</strong> ${selectionData.sector}</div>
+      <div class="summary-item"><strong>Zona:</strong> ${selectionData.zone}</div>
+    `;
+  }
+  
+  const name = document.getElementById('modal-name').value;
+  const email = document.getElementById('modal-email').value;
+  const phone = document.getElementById('modal-phone').value;
+  const experience = document.getElementById('modal-experience').value;
+
+  if (generatedPdfBlob) {
+    const reader = new FileReader();
+    reader.readAsDataURL(generatedPdfBlob);
+    reader.onloadend = function() {
+      const base64data = reader.result;
+      
+      const emailParams = {
+        to_email: "manuelmorey527@gmail.com",
+        subject: `Nuova Candidatura da ${name}`,
+        body: `
+          Nuova candidatura ricevuta:
+          Nome: ${name}
+          Email: ${email}
+          Telefono: ${phone}
+          
+          Dettagli Selezione:
+          Paese: ${selectionData.country}
+          Settore: ${selectionData.sector}
+          Zona: ${selectionData.zone}
+          
+          Esperienze:
+          ${experience}
+        `,
+        attachment: base64data
+      };
+
+      fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(emailParams)
+      }).catch(err => console.error("Errore invio email:", err));
+    };
+  }
+};
+
+window.onclick = function(event) {
+  const modal = document.getElementById('cvModal');
+  if (event.target == modal) closeCVModal();
+}
+
 // Carica lingua salvata
 let currentLang = localStorage.getItem("lang") || "it";
 loadLanguage(currentLang);
