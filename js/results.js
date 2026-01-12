@@ -1,12 +1,39 @@
+const countryImages = {
+  'Germania': 'assets/countries/germania.jpg',
+  'Austria': 'assets/countries/austria.jpg',
+  'Olanda': 'assets/countries/olanda.jpg',
+  'Belgio': 'assets/countries/belgio.jpg',
+  'Portogallo': 'assets/countries/portogallo.jpg',
+  'Svezia': 'assets/countries/svezia.jpg',
+  'Svizzera': 'assets/countries/svizzera.jpg',
+  'Norvegia': 'assets/countries/norvegia.jpg',
+  'default': 'assets/countries/default.jpg'
+};
+
 document.addEventListener('DOMContentLoaded', function() {
   const params = new URLSearchParams(window.location.search);
   const country = params.get('country');
   const sector = params.get('sector');
   const zone = params.get('zone');
 
+  displayCountryBanner(country);
   const results = filterJobs(country, sector, zone);
   displayResults(results, country, sector, zone);
 });
+
+function displayCountryBanner(country) {
+  const bannerContainer = document.getElementById('country-banner');
+  const bannerImage = document.getElementById('country-image');
+  
+  if (country) {
+    const imagePath = countryImages[country] || countryImages['default'];
+    bannerImage.src = imagePath;
+    bannerImage.alt = country;
+    bannerContainer.style.display = 'block';
+  } else {
+    bannerContainer.style.display = 'none';
+  }
+}
 
 function displayResults(results, country, sector, zone) {
   const resultsContainer = document.getElementById('results');

@@ -67,8 +67,17 @@ app.use((req, res, next) => {
 (async () => {
   await registerRoutes(httpServer, app);
 
-  // Serve static HTML files from client/public
-  app.use(express.static(path.resolve(__dirname, "../client/public")));
+  // Serve static HTML files from client/public with explicit routes
+  const publicPath = path.resolve(__dirname, "../client/public");
+  app.use(express.static(publicPath));
+  
+  // Explicitly handle static HTML page requests before Vite catches them
+  const staticHtmlPages = ['index.html', 'search.html', 'results.html', 'register.html', 'login.html', 'upload_reduced.html'];
+  staticHtmlPages.forEach(page => {
+    app.get(`/${page}`, (_req, res) => {
+      res.sendFile(path.join(publicPath, page));
+    });
+  });
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;
